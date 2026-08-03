@@ -104,6 +104,17 @@ ChEMBL SQLite 数据库和指纹文件是大型二进制文件，**不存储在�
 python scripts/download_chembl.py
 ```
 
+## Limitations · 局限性
+
+| Limitation · 局限 | Detail · 说明 |
+|---|---|
+| 🔬 **Requires experimental validation** · 需要实验验证 | Predictions are statistical hypotheses, not confirmed binding. All results should be verified by biochemical assays. 预测结果是统计假设，非确认结合，需生化实验验证。 |
+| 📚 **Bounded by ChEMBL coverage** · 受 ChEMBL 覆盖范围限制 | Only targets with known ligands in ChEMBL (~4,300 targets) can be predicted. Novel or poorly studied targets are invisible to this method. 只能预测 ChEMBL 中有已知配体的靶点。 |
+| 🧪 **Similarity bias** · 相似性偏差 | SEA relies on chemical similarity. Compounds with entirely novel scaffolds may miss true targets that share no similar known ligands. 基于化学相似性，全新骨架可能漏掉真实靶点。 |
+| 🎯 **No affinity prediction** · 无法预测亲和力 | The method predicts *whether* a compound may bind, not *how strongly* (no Kd/IC50). 只预测是否可能结合，不预测结合强度。 |
+| ⚠️ **Promiscuous compounds** · 泛结合化合物 | Compounds like quercetin may return 200+ hits. High prediction count often indicates non-specific binding, not genuine polypharmacology. 泛结合化合物可能产生大量假阳性。 |
+| 💾 **Large disk requirement** · 磁盘需求大 | ChEMBL SQLite requires ~29 GB after extraction. Fingerprint database adds ~114 MB. 数据库解压后约 29 GB，指纹文件约 114 MB。 |
+
 ## References · 参考文献
 
 - Keiser et al. (2007) *Nature Biotechnology* 25(2), 197–206
