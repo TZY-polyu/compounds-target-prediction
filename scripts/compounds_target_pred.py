@@ -130,7 +130,7 @@ def main():
                         help="MaxTc cutoff for SEA+TC (default: 0.4)")
     parser.add_argument("--cache-dir", default=".cache",
                         help="Cache directory (default: .cache)")
-    parser.add_argument("--output", help="Output JSON file path (default: result.json)")
+    parser.add_argument("--output", help="Output JSON file path (default: result/pred_<hash>_<ts>.json or result/batch_<ts>.json)")
     parser.add_argument("--input-manifest", help="Path for input manifest JSON")
     parser.add_argument("--top-n", type=int, default=50,
                         help="Return top N predictions (default: 50, use 0 for all)")
@@ -228,7 +228,16 @@ def main():
         "errors": errors,
     }, indent=2, ensure_ascii=False)
 
-    output_path = args.output if args.output else os.path.join(args.cache_dir, "result.json")
+    output_path = args.output
+    if not output_path:
+        os.makedirs("result", exist_ok=True)
+        if len(smiles_list) == 1 and args.smiles:
+            smi_hash = hashlib.md5(smiles_list[0].encode()).hexdigest()[:8]
+            ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+            output_path = f"result/pred_{smi_hash}_{ts}.json"
+        else:
+            ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+            output_path = f"result/batch_{ts}.json"
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(out)
     print(f"Output → {output_path}")
