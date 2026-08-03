@@ -1,0 +1,313 @@
+---
+name: compounds-target-prediction
+description: Predict protein targets for small-molecule compounds using pre-built SEA+TC (Similarity Ensemble Approach with Tanimoto Coefficient enhancement) fingerprint database from UCSF Shoichet Lab. Results include gene symbols (auto-loaded from ChEMBL target metadata). Works on ANY valid SMILES — known, novel, or virtual compounds. Use when the user needs to (1) find potential protein targets of a compound, (2) predict target binding from SMILES, (3) perform target fishing, or (4) generate target hypotheses for mechanism-of-action studies.
+---
+
+# Compounds Target Prediction
+
+Predict protein targets from SMILES strings using **SEA (Similarity Ensemble Approach)** — the UCSF Shoichet Laboratory method.
+
+SEA relates proteins based on set-wise chemical similarity among their ligands using ChEMBL data. Published in *Nature Biotechnology* (2007), it is one of the most established computational target prediction tools and the only method with systematic experimental validation (Keiser et al. 2007, 2009).
+
+## Why SEA Works for Novel Compounds
+
+**No training required.** Given any SMILES, the engine computes its ECFP4 fingerprint and compares it against 4309 pre-built target-ligand fingerprint sets. Predictions are driven purely by structural similarity — the query compound does NOT need to exist in any database. This makes SEA ideal for virtual screening, de novo design, and exploring uncharted chemical space.
+
+```
+Novel SMILES → ECFP4 fingerprint → SEA statistical test against 4309 target sets → predictions
+```
+
+## Quick Start
+
+### Prerequisites
+
+```bash
+pip install rdkit numpy scipy
+```
+
+### Single Compound
+
+```bash
+python scripts/compounds_target_pred.py \
+  --smiles "CC(=O)Oc1ccccc1C(=O)O" --pvalue 0.05
+# → Saved to result/pred_<hash>_<ts>.json (默认返回 top 5)
+```
+
+### Single Compound (custom output path)
+
+```bash
+python scripts/compounds_target_pred.py \
+  --smiles "CC(=O)Oc1ccccc1C(=O)O" --pvalue 0.05 \
+  --output aspirin_targets.json
+```
+
+### Batch Mode
+
+```bash
+python scripts/compounds_target_pred.py \
+  --input-file compounds.json --pvalue 0.05
+# → Saved to result/batch_20260713_143225.json
+```
+
+Batch input format (`compounds.json`):
+
+```json
+{
+  "compounds": [
+    {"smiles": "CC(=O)Oc1ccccc1C(=O)O"},
+    {"smiles": "C1=CC(=C(C=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)O)O)O"}
+  ]
+}
+```
+
+## Architecture
+
+```
+compounds-targets-data/
+├── target_fps.pkl     ← Pre-built fingerprint database (4309 targets, ECFP4 2048-bit)
+├── target_info.json   ← Target metadata (gene symbol, organism, type) — generated from ChEMBL SQLite
+└── fit_params.json    ← Pre-calibrated EVD background model
+
+scripts/
+├── compounds_target_pred.py   ← CLI entry point
+└── local_sea/
+    ├── fingerprints.py        ← ECFP4 fingerprint computation
+    ├── calibration.py         ← EVD fit parameters loading
+    └── predictor.py           ← SEA+TC prediction engine (P-value OR MaxTc)
+```
+
+The fingerprint database and calibration parameters are **pre-built and ready to use** — no network, no recalibration needed for day-to-day predictions. However, **`target_info.json` must be generated from ChEMBL SQLite** (one-time setup, see below) to display human-readable gene symbols in output; without it, results use raw CHEMBL IDs as fallback. Data files live in `compounds-targets-data/` at the project root.
+
+## Algorithm
+
+### SEA+TC Dual-Threshold
+
+The **SEA+TC** algorithm (Irwin et al. 2018) improves accuracy over traditional SEA:
+
+```
+Positive prediction = (P-value < cutoff) OR (MaxTc >= 0.4)
+```
+
+This captures targets where the query compound has high structural similarity to a known ligand even when set-wise statistics are not significant — especially useful for targets with few known ligands.
+
+### Performance
+
+| Metric | Value |
+|--------|-------|
+| Per query (uncached) | ~170ms |
+| Per query (cached) | ~0.1ms (hash lookup) |
+| DB load + init | ~2.5s (one-time) |
+| Total targets in database | 4309 |
+| Fingerprint type | ECFP4, 2048-bit |
+| Results cached by | SMILES hash → `.cache/` |
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `--smiles` | str | — | Single SMILES string |
+| `--input-file` | str | — | JSON file with `compounds` array for batch mode |
+| `--pvalue` | float | `0.05` | SEA P-value cutoff (smaller = more stringent) |
+| `--maxtc` | float | `0.4` | SEA+TC MaxTc cutoff |
+| `--output` | str | auto-generated | Output JSON path (default: `result/pred_<hash>_<ts>.json` or `result/batch_<ts>.json`) |
+| `--top-n` | int | `5` | Return top N predictions (0 = all) |
+| `--target-info` | str | `compounds-targets-data/target_info.json` | Target metadata JSON for gene symbols |
+| `--fingerprints` | str | `compounds-targets-data/target_fps.pkl` | Path to fingerprint database |
+| `--fit-params` | str | `compounds-targets-data/fit_params.json` | Path to calibration parameters |
+| `--cache-dir` | str | `.cache` | Directory for cached results |
+
+### Recommended P-value Cutoffs
+
+| Use Case | `--pvalue` | Interpretation |
+|----------|-----------|----------------|
+| High-confidence target ID | `0.01` | Very stringent, low false positive |
+| Standard target fishing | `0.05` | Balanced sensitivity/specificity |
+| Exploratory / hypothesis generation | `0.10` | Broader coverage, more candidates |
+
+## Output Schema
+
+```json
+{
+  "method": "sea+tc",
+  "total_compounds": 5,
+  "valid_count": 4,
+  "invalid_count": 1,
+  "results": [
+    {
+      "smiles": "CC(=O)Oc1ccccc1C(=O)O",
+      "method": "sea+tc",
+      "total_predictions": 135,
+      "targets": [
+        {
+          "target_key": "CHEMBL230",
+          "target_name": "PTGS2",
+          "gene_symbol": "PTGS2",
+          "description": "Prostaglandin G/H synthase 2 (Homo sapiens)",
+          "pvalue": 2.02e-09,
+          "maxtc": 1.0,
+          "probability": 0.72
+        }
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "smiles": "INVALID_STRING",
+      "error": "Invalid SMILES: INVALID_STRING"
+    }
+  ]
+}
+```
+
+### Error Recovery
+
+Invalid SMILES are **logged to the `errors` array** and do NOT stop the pipeline.
+Downstream tools can read `valid_count` / `invalid_count` to decide whether to proceed.
+
+### Field Reference
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `total_compounds` | int | Total input compounds |
+| `valid_count` | int | Successfully predicted compounds |
+| `invalid_count` | int | Compounds that failed (see `errors` array) |
+| `results` | array | Successful predictions |
+| `errors` | array | Failed compounds with SMILES and error message |
+| `target_key` | str | ChEMBL target ID (e.g. `CHEMBL230`) |
+| `target_name` | str | HGNC gene symbol (e.g. `PTGS2`) — auto-loaded from `data/target_info.json`; falls back to protein name or CHEMBL ID if unavailable |
+| `gene_symbol` | str | Same as `target_name`; provided for compatibility with downstream tools such as `target-intersect` that expect a `gene_symbol` field |
+| `description` | str | Full protein description with organism (auto-loaded) |
+| `pvalue` | float | SEA statistical significance — **smaller = more confident** |
+| `maxtc` | float | Maximum Tanimoto coefficient to nearest known ligand (0–1) |
+| `probability` | float | Combined confidence score (0–1), derived from pvalue + MaxTc |
+
+## How to Interpret Results
+
+1. **probability** is the overall confidence score. Sort by this field descending for the most likely targets.
+2. **pvalue** approaching 0 (< 1e-10) indicates extreme statistical significance — the query compound's fingerprint set is highly non-random relative to the target's known ligands.
+3. **maxtc = 1.0** means the query compound is identical to a known ligand of that target (self-match or exact structural duplicate in ChEMBL).
+4. **maxtc ≥ 0.4** with modest p-value indicates structural similarity sufficient for a positive SEA+TC call even when set-wise statistics are weak.
+5. A compound with 200+ predictions (e.g. quercetin) is likely a promiscuous binder; one with <20 (e.g. morphine) is highly selective.
+
+## Dependencies
+
+| Dependency | Purpose |
+|-----------|---------|
+| Python 3.9+ | Runtime |
+| RDKit | ECFP4 fingerprint computation |
+| NumPy | Array operations |
+| SciPy | Extreme value distribution fitting |
+
+## Setup: Target Metadata (Gene Symbols)
+
+To display human-readable gene symbols in predictions (instead of raw CHEMBL IDs), generate `data/target_info.json` from a ChEMBL SQLite database:
+
+```bash
+# Requires ChEMBL SQLite (~5.4GB compressed, ~29GB unpacked)
+# Download from: https://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/latest/
+python -c "
+import sqlite3, json
+conn = sqlite3.connect('chembl_37.db')
+cur = conn.cursor()
+
+# Step 1: Get all targets
+cur.execute('SELECT chembl_id, pref_name, organism, target_type, tid FROM target_dictionary')
+targets = cur.fetchall()
+
+# Step 2: For each target, find GENE_SYMBOL from component_synonyms
+info = {}
+for chembl_id, pref_name, organism, target_type, tid in targets:
+    cur.execute('''
+        SELECT DISTINCT cs.component_synonym
+        FROM target_components tc
+        JOIN component_synonyms cs ON tc.component_id = cs.component_id
+        WHERE tc.tid = ? AND cs.syn_type = 'GENE_SYMBOL'
+    ''', (tid,))
+    symbols = [r[0] for r in cur.fetchall()]
+    
+    gene_str = ';'.join(symbols) if symbols else None
+    target_name = gene_str if gene_str else (pref_name or chembl_id)
+    description = f'{pref_name} ({organism})' if pref_name and organism else (pref_name or gene_str or chembl_id)
+    
+    info[chembl_id] = {
+        'target_name': target_name,
+        'description': description,
+        'organism': organism or '',
+        'target_type': target_type or ''
+    }
+
+conn.close()
+with open('compounds-targets-data/target_info.json', 'w') as f: json.dump(info, f, ensure_ascii=False, indent=2)
+print(f'Saved {len(info)} target metadata entries')
+"
+```
+
+> Without `target_info.json`, predictions still work — `target_name` and `description` fields fall back to CHEMBL IDs. The file is ~3MB and only needs to be regenerated when switching ChEMBL versions. Output to `compounds-targets-data/target_info.json`.
+
+## Regenerating the Fingerprint Database
+
+The pre-built database is based on ChEMBL. To rebuild with a different ChEMBL version or custom filters:
+
+```
+ChEMBL SQLite (~29GB, full)
+    ↓ data_extract.py (extracts 4 tables out of 72)
+Target-Ligand data (4309 targets)
+    ↓ fingerprints.py
+Fingerprint Database (.pkl, ~112MB)
+    ↓ calibration.py (one-time, 1-2h)
+Fit Parameters (.json)
+    ↓ predictor.py
+SEA+TC Predictions (~170ms/query)
+```
+
+### Step-by-Step Rebuild
+
+```bash
+# Step 1: Extract data from ChEMBL SQLite
+# Download from: ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/latest/
+python scripts/local_sea/data_extract.py chembl.db --output compounds-targets-data/
+
+# Step 2: Generate target metadata (gene symbols from component_synonyms)
+python -c "
+import sqlite3, json
+conn = sqlite3.connect('chembl.db')
+cur = conn.cursor()
+cur.execute('SELECT chembl_id, pref_name, organism, target_type, tid FROM target_dictionary')
+targets = cur.fetchall()
+info = {}
+for chembl_id, pref_name, organism, target_type, tid in targets:
+    cur.execute('''
+        SELECT DISTINCT cs.component_synonym
+        FROM target_components tc
+        JOIN component_synonyms cs ON tc.component_id = cs.component_id
+        WHERE tc.tid = ? AND cs.syn_type = 'GENE_SYMBOL'
+    ''', (tid,))
+    symbols = [r[0] for r in cur.fetchall()]
+    gene_str = ';'.join(symbols) if symbols else None
+    target_name = gene_str if gene_str else (pref_name or chembl_id)
+    description = f'{pref_name} ({organism})' if pref_name and organism else (pref_name or gene_str or chembl_id)
+    info[chembl_id] = {'target_name': target_name, 'description': description, 'organism': organism or '', 'target_type': target_type or ''}
+conn.close()
+with open('compounds-targets-data/target_info.json', 'w') as f: json.dump(info, f, ensure_ascii=False, indent=2)
+print(f'Saved {len(info)} target metadata entries')
+"
+
+# Step 3: Calibrate background model (~1-2 hours)
+python -c "
+from local_sea.fingerprints import load_fingerprints
+from local_sea.calibration import quick_calibrate, save_fit_params
+target_fps = load_fingerprints('compounds-targets-data/target_fps.pkl')
+fit = quick_calibrate(target_fps)
+save_fit_params(fit, 'compounds-targets-data/fit_params.json')
+"
+```
+
+> This is only needed to update the database. For day-to-day predictions, the pre-built files in `compounds-targets-data/` are ready to use.
+
+## References
+
+- Keiser et al. (2007) *Nature Biotechnology* 25(2), 197-206 — Original SEA
+- Keiser et al. (2009) *Nature* 462, 175-181 — Experimental validation
+- Irwin et al. (2018) *J. Chem. Inf. Model.* 58(7) — SEA+TC enhancement
+- Wang et al. (2016) *J. Cheminformatics* 8, 20 — Multi-fingerprint SEA
+- [SEA Wiki (Shoichet Lab)](https://wiki.docking.org/index.php/Category:SEA)
