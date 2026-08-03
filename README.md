@@ -65,7 +65,11 @@ After download, build the fingerprint database required for prediction:
 # Single compound · 单个化合物
 python scripts/compounds_target_pred.py \
   --smiles "CC(=O)Oc1ccccc1C(=O)O" --pvalue 0.05 --top-n 5
+
+# Output → result/pred_<hash>_<ts>.json
 ```
+
+Results are saved to the `result/` directory in JSON format.
 
 ## Output Example · 输出示例
 
@@ -89,6 +93,7 @@ python scripts/compounds_target_pred.py \
 | `target_fps.pkl` | ~114 MB | Generated from ChEMBL (see [SKILL.md](SKILL.md)) |
 | `target_info.json` | ~3.5 MB | Included in repo · 已包含在仓库 |
 | `fit_params.json` | <1 KB | Included in repo · 已包含在仓库 |
+| `result/*.json` | varies | Prediction output · 预测结果输出 |
 
 The ChEMBL SQLite database and fingerprint file are large binaries **not stored in this repo**. Use the download script to get started:
 

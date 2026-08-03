@@ -25,12 +25,23 @@ Novel SMILES → ECFP4 fingerprint → SEA statistical test against 4309 target 
 pip install rdkit numpy scipy
 ```
 
+### Download Database
+
+The SEA+TC engine requires the ChEMBL SQLite database. Use the bundled download script:
+
+```bash
+python scripts/download_chembl.py
+# → Downloads ~5.4GB, extracts to ~29GB. Asks for confirmation first.
+```
+
+After download, generate the fingerprint database (see [Regenerating the Fingerprint Database](#regenerating-the-fingerprint-database)).
+
 ### Single Compound
 
 ```bash
 python scripts/compounds_target_pred.py \
   --smiles "CC(=O)Oc1ccccc1C(=O)O" --pvalue 0.05
-# → Saved to result/pred_<hash>_<ts>.json (默认返回 top 5)
+# → Saved to result/pred_<hash>_<ts>.json (default: top 50)
 ```
 
 ### Single Compound (custom output path)
@@ -70,10 +81,13 @@ compounds-targets-data/
 
 scripts/
 ├── compounds_target_pred.py   ← CLI entry point
+├── download_chembl.py         ← ChEMBL database downloader
 └── local_sea/
     ├── fingerprints.py        ← ECFP4 fingerprint computation
     ├── calibration.py         ← EVD fit parameters loading
     └── predictor.py           ← SEA+TC prediction engine (P-value OR MaxTc)
+
+result/                    ← Prediction output directory (auto-created)
 ```
 
 The fingerprint database and calibration parameters are **pre-built and ready to use** — no network, no recalibration needed for day-to-day predictions. However, **`target_info.json` must be generated from ChEMBL SQLite** (one-time setup, see below) to display human-readable gene symbols in output; without it, results use raw CHEMBL IDs as fallback. Data files live in `compounds-targets-data/` at the project root.
@@ -110,7 +124,7 @@ This captures targets where the query compound has high structural similarity to
 | `--pvalue` | float | `0.05` | SEA P-value cutoff (smaller = more stringent) |
 | `--maxtc` | float | `0.4` | SEA+TC MaxTc cutoff |
 | `--output` | str | auto-generated | Output JSON path (default: `result/pred_<hash>_<ts>.json` or `result/batch_<ts>.json`) |
-| `--top-n` | int | `5` | Return top N predictions (0 = all) |
+| `--top-n` | int | `50` | Return top N predictions (0 = all) |
 | `--target-info` | str | `compounds-targets-data/target_info.json` | Target metadata JSON for gene symbols |
 | `--fingerprints` | str | `compounds-targets-data/target_fps.pkl` | Path to fingerprint database |
 | `--fit-params` | str | `compounds-targets-data/fit_params.json` | Path to calibration parameters |
@@ -200,12 +214,15 @@ Downstream tools can read `valid_count` / `invalid_count` to decide whether to p
 
 ## Setup: Target Metadata (Gene Symbols)
 
-To display human-readable gene symbols in predictions (instead of raw CHEMBL IDs), generate `data/target_info.json` from a ChEMBL SQLite database:
+To display human-readable gene symbols in predictions (instead of raw CHEMBL IDs), generate `compounds-targets-data/target_info.json` from a ChEMBL SQLite database.
+
+First, download the ChEMBL database:
 
 ```bash
-# Requires ChEMBL SQLite (~5.4GB compressed, ~29GB unpacked)
-# Download from: https://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/latest/
-python -c "
+python scripts/download_chembl.py
+```
+
+Then extract target metadata:
 import sqlite3, json
 conn = sqlite3.connect('chembl_37.db')
 cur = conn.cursor()
