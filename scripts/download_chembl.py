@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-ChEMBL Database Downloader
-==========================
-Automatically download and extract the latest ChEMBL SQLite database.
+ChEMBL Database Downloader + Target Info Generator
+===================================================
+Automatically download ChEMBL SQLite, extract, and generate target_info.json.
 
 Usage:
     python scripts/download_chembl.py
@@ -14,10 +14,13 @@ The script will:
     2. Ask for confirmation before downloading (~5.4GB compressed, ~29GB extracted)
     3. Download from the official ChEMBL FTP mirror
     4. Extract the .tar.gz archive
+    5. Auto-generate target_info.json with gene symbols from ChEMBL
 """
 
 import argparse
+import json
 import os
+import sqlite3
 import sys
 import tarfile
 import urllib.request
@@ -61,16 +64,15 @@ def progress_hook(block_num: int, block_size: int, total_size: int):
         print(f"\r  Downloaded: {format_size(downloaded)}", end="", flush=True)
 
 
-def find_existing_db(output_dir: Path) -> list[str]:
+def find_existing_db(output_dir: Path) -> list[Path]:
     """Find existing ChEMBL SQLite files in the output directory."""
-    existing = sorted(output_dir.glob("chembl_*.db"))
-    return [str(p) for p in existing]
+    return sorted(output_dir.glob("chembl_*.db"))
 
 
-def find_existing_archive(output_dir: Path) -> list[str]:
-    """Find existing downloaded archives."""
-    existing = sorted(output_dir.glob("chembl_*_sqlite.tar.gz"))
-    return [str(p) for p in existing]
+def find_latest_db(output_dir: Path) -> Path | None:
+    """Return the most recent ChEMBL SQLite file, or None."""
+    dbs = find_existing_db(output_dir)
+    return dbs[-1] if dbs else None
 
 
 def extract_tar_gz(archive_path: Path, output_dir: Path) -> Path:
@@ -78,7 +80,6 @@ def extract_tar_gz(archive_path: Path, output_dir: Path) -> Path:
     print(f"\nExtracting {archive_path.name} ...")
     with tarfile.open(archive_path, "r:gz") as tar:
         members = tar.getmembers()
-        # Find the .db file
         db_member = None
         for m in members:
             if m.name.endswith(".db"):
@@ -94,7 +95,6 @@ def extract_tar_gz(archive_path: Path, output_dir: Path) -> Path:
             print(f"  Extracted → {db_path}")
             return db_path
         else:
-            # No .db found, extract all
             print("  Extracting all files ...")
             tar.extractall(path=output_dir, filter="data")
             db_files = sorted(output_dir.glob("chembl_*.db"))
@@ -105,11 +105,72 @@ def extract_tar_gz(archive_path: Path, output_dir: Path) -> Path:
                 raise RuntimeError("No .db file found in archive")
 
 
+# ── Target Info Generator ──────────────────────────────────────────────────
+
+def generate_target_info(db_path: Path, output_dir: Path) -> Path:
+    """
+    Generate target_info.json from ChEMBL SQLite.
+    Extracts gene symbols via target_components + component_synonyms.
+    """
+    info_path = output_dir / "target_info.json"
+
+    print(f"\nGenerating target metadata from {db_path.name} ...")
+    conn = sqlite3.connect(str(db_path))
+    cur = conn.cursor()
+
+    # Step 1: Get all targets
+    cur.execute(
+        "SELECT chembl_id, pref_name, organism, target_type, tid "
+        "FROM target_dictionary"
+    )
+    targets = cur.fetchall()
+    print(f"  {len(targets)} targets found in target_dictionary")
+
+    # Step 2: For each target, find GENE_SYMBOL from component_synonyms
+    info = {}
+    for i, (chembl_id, pref_name, organism, target_type, tid) in enumerate(targets):
+        cur.execute(
+            "SELECT DISTINCT cs.component_synonym "
+            "FROM target_components tc "
+            "JOIN component_synonyms cs ON tc.component_id = cs.component_id "
+            "WHERE tc.tid = ? AND cs.syn_type = 'GENE_SYMBOL'",
+            (tid,),
+        )
+        symbols = [r[0] for r in cur.fetchall()]
+
+        gene_str = ";".join(symbols) if symbols else None
+        target_name = gene_str if gene_str else (pref_name or chembl_id)
+        description = (
+            f"{pref_name} ({organism})"
+            if pref_name and organism
+            else (pref_name or gene_str or chembl_id)
+        )
+
+        info[chembl_id] = {
+            "target_name": target_name,
+            "description": description,
+            "organism": organism or "",
+            "target_type": target_type or "",
+        }
+
+        if (i + 1) % 5000 == 0:
+            print(f"  Progress: {i + 1}/{len(targets)} targets processed")
+
+    conn.close()
+
+    with open(info_path, "w", encoding="utf-8") as f:
+        json.dump(info, f, ensure_ascii=False, indent=2)
+
+    file_size = os.path.getsize(info_path)
+    print(f"  Saved {len(info)} entries → {info_path} ({format_size(file_size)})")
+    return info_path
+
+
 # ── Main ───────────────────────────────────────────────────────────────────
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Download the latest ChEMBL SQLite database for target prediction."
+        description="Download ChEMBL SQLite and generate target metadata."
     )
     parser.add_argument(
         "--output", "-o",
@@ -125,6 +186,11 @@ def main():
         "--url",
         help=f"Custom download URL (default: {CHEMBL_BASE_URL}{CHEMBL_DB_NAME})",
     )
+    parser.add_argument(
+        "--skip-target-info",
+        action="store_true",
+        help="Skip target_info.json generation",
+    )
     args = parser.parse_args()
 
     output_dir = Path(args.output).resolve()
@@ -135,13 +201,23 @@ def main():
     archive_path = output_dir / archive_name
 
     # ── Step 1: Check if .db already exists ────────────────────────────────
-    existing_dbs = find_existing_db(output_dir)
-    if existing_dbs:
-        print("✅ ChEMBL database already exists:")
-        for db in existing_dbs:
-            size = os.path.getsize(db)
-            print(f"   {db} ({format_size(size)})")
-        print("\nSkipping download. To re-download, delete the existing .db file first.")
+    db_path = find_latest_db(output_dir)
+    if db_path:
+        size = os.path.getsize(db_path)
+        print(f"✅ ChEMBL database already exists: {db_path.name} ({format_size(size)})")
+
+        # Check if target_info.json needs (re)generation
+        info_path = output_dir / "target_info.json"
+        if not args.skip_target_info:
+            if info_path.exists():
+                print(f"✅ target_info.json already exists ({format_size(os.path.getsize(info_path))})")
+                print("\nAll ready. To re-download, delete the existing files first.")
+            else:
+                print("\ntarget_info.json not found, generating ...")
+                generate_target_info(db_path, output_dir)
+                print("\n✅ All ready.")
+        else:
+            print("\nSkipping target_info.json (--skip-target-info)")
         return
 
     # ── Step 2: Check if archive already downloaded ────────────────────────
@@ -161,8 +237,8 @@ def main():
             print(f"  After:    ~29 GB (extracted)")
             print(f"  Save to:  {output_dir}/")
             print()
-            print("  This download is required for target prediction.")
-            print("  Without it, the SEA+TC engine cannot run.")
+            print("  The database is required for target prediction.")
+            print("  target_info.json will be auto-generated after extraction.")
             print()
 
             answer = input("  Download now? [Y/n] ").strip().lower()
@@ -181,12 +257,11 @@ def main():
                 archive_path,
                 reporthook=progress_hook,
             )
-            print()  # newline after progress bar
+            print()
             final_size = os.path.getsize(archive_path)
             print(f"\n✅ Download complete: {format_size(final_size)}")
         except Exception as e:
             print(f"\n❌ Download failed: {e}")
-            # Clean up partial download
             if archive_path.exists():
                 archive_path.unlink()
             sys.exit(1)
@@ -198,14 +273,13 @@ def main():
         print(f"\n❌ Extraction failed: {e}")
         sys.exit(1)
 
-    # ── Step 6: Verify ─────────────────────────────────────────────────────
-    if db_path.exists():
-        db_size = os.path.getsize(db_path)
-        print(f"\n✅ ChEMBL database ready: {db_path.name} ({format_size(db_size)})")
-        print(f"\nNext step: generate fingerprint database → see SKILL.md")
-    else:
-        print(f"\n❌ Error: .db file not found after extraction")
-        sys.exit(1)
+    # ── Step 6: Generate target_info.json ──────────────────────────────────
+    if not args.skip_target_info:
+        generate_target_info(db_path, output_dir)
+
+    # ── Step 7: Verify ─────────────────────────────────────────────────────
+    print(f"\n✅ ChEMBL database ready: {db_path.name} ({format_size(os.path.getsize(db_path))})")
+    print(f"Next step: generate fingerprint database → see SKILL.md")
 
 
 if __name__ == "__main__":
