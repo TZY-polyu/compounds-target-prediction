@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Large data files
+*.pkl
+
+# Cache
+.cache/
+
+# Codegraph
+.codegraph
+
+# macOS
+.DS_Store
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# OpenCode
+.omo/
+
+# IDE
+.vscode/
+.idea/
