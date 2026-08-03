@@ -8,6 +8,9 @@ build/
 # Large data files
 *.pkl
 
+# Generated data (built from ChEMBL via download_chembl.py)
+compounds-targets-data/target_info.json
+
 # Prediction results
 result/*.json
 
