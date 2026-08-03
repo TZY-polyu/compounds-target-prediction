@@ -19,11 +19,49 @@ Given any valid SMILES string, this tool predicts which protein targets the comp
 | 🎯 **4,309 targets** · 覆盖4309个靶点 | Powered by ChEMBL bioactivity data |
 | 🔬 **SEA+TC dual threshold** · 双阈值 | Improved accuracy (Irwin et al. 2018) |
 
-## Quick Start · 快速开始
+## Setup · 环境配置
+
+### 1. Install dependencies · 安装依赖
 
 ```bash
 pip install rdkit numpy scipy
+```
 
+### 2. Download ChEMBL database · 下载 ChEMBL 数据库
+
+The SEA+TC engine requires the ChEMBL SQLite database (~5.4 GB compressed, ~29 GB extracted). Use the bundled download script:
+
+SEA+TC 引擎需要 ChEMBL SQLite 数据库（压缩包约5.4 GB，解压后约29 GB）。使用自带的下载脚本：
+
+```bash
+python scripts/download_chembl.py
+```
+
+The script will:
+- ✅ Check if the database already exists
+- ❓ Ask for confirmation before downloading (use `--yes` to skip)
+- ⬇ Download from the official ChEMBL FTP mirror
+- 📦 Extract the `.tar.gz` archive
+
+脚本会：检查是否已下载 → 询问确认 → 自动下载 → 解压。
+
+| Option · 选项 | Description · 说明 |
+|---|---|
+| `--output DIR` | Custom output directory · 自定义输出路径 |
+| `--yes, -y` | Skip confirmation prompt · 跳过确认 |
+| `--url URL` | Custom download URL · 自定义下载地址 |
+
+### 3. Generate fingerprint database · 生成指纹数据库
+
+After download, build the fingerprint database required for prediction:
+
+下载完成后，生成预测所需的指纹数据库：
+
+→ [Rebuild Instructions · 重建指南](SKILL.md#regenerating-the-fingerprint-database)
+
+## Quick Start · 快速开始
+
+```bash
 # Single compound · 单个化合物
 python scripts/compounds_target_pred.py \
   --smiles "CC(=O)Oc1ccccc1C(=O)O" --pvalue 0.05 --top-n 5
@@ -45,11 +83,20 @@ python scripts/compounds_target_pred.py \
 
 ## Data · 数据
 
-The pre-built fingerprint database (`target_fps.pkl`, ~114MB) is **not included** in this repository. To generate it, download ChEMBL SQLite and follow the rebuild guide.
+| File · 文件 | Size · 大小 | Source · 来源 |
+|---|---|---|
+| `chembl_*.db` | ~29 GB | Download via `scripts/download_chembl.py` |
+| `target_fps.pkl` | ~114 MB | Generated from ChEMBL (see [SKILL.md](SKILL.md)) |
+| `target_info.json` | ~3.5 MB | Included in repo · 已包含在仓库 |
+| `fit_params.json` | <1 KB | Included in repo · 已包含在仓库 |
 
-预构建指纹数据库（`target_fps.pkl`，约114MB）**未包含**在本仓库。请下载 ChEMBL SQLite 后按重建指南操作。
+The ChEMBL SQLite database and fingerprint file are large binaries **not stored in this repo**. Use the download script to get started:
 
-→ [Rebuild Instructions · 重建指南](SKILL.md#regenerating-the-fingerprint-database)
+ChEMBL SQLite 数据库和指纹文件是大型二进制文件，**不存储在仓库中**。使用下载脚本获取：
+
+```bash
+python scripts/download_chembl.py
+```
 
 ## References · 参考文献
 
