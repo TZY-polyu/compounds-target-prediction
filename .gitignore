@@ -8,6 +8,9 @@ build/
 # Large data files
 *.pkl
 
+# Prediction results
+result/*.json
+
 # Cache
 .cache/
 
