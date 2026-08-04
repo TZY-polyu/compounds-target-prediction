@@ -96,6 +96,7 @@ scripts/
 ├── compounds_target_pred.py   ← CLI entry point
 ├── download_chembl.py         ← ChEMBL database downloader
 └── local_sea/
+    ├── data_extract.py        ← ChEMBL → target-ligand extraction + fingerprints
     ├── fingerprints.py        ← ECFP4 fingerprint computation
     ├── calibration.py         ← EVD fit parameters loading
     └── predictor.py           ← SEA+TC prediction engine (P-value OR MaxTc)
@@ -257,9 +258,13 @@ SEA+TC Predictions (~170ms/query)
 ### Step-by-Step Rebuild
 
 ```bash
-# Step 1: Extract data from ChEMBL SQLite
-# Download from: ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/latest/
-python scripts/local_sea/data_extract.py chembl.db --output compounds-targets-data/
+# Step 1: Extract target-ligand data + compute fingerprints (SINGLE PROTEIN only)
+# Download ChEMBL from: ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/latest/
+# Filtering: target_type='SINGLE PROTEIN', pchembl_value>=5.0, min 1 ligand
+python scripts/local_sea/data_extract.py chembl.db \
+  --output compounds-targets-data/target_ligands.pkl \
+  --to-fingerprints
+# → target_ligands.pkl + target_fps.pkl
 
 # Step 2: Generate target metadata (gene symbols from component_synonyms)
 python -c "
