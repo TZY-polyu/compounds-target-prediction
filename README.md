@@ -19,6 +19,18 @@ Given any valid SMILES string, this tool predicts which protein targets the comp
 | 🎯 **4,309 targets** · 覆盖4309个靶点 | Powered by ChEMBL bioactivity data |
 | 🔬 **SEA+TC dual threshold** · 双阈值 | Improved accuracy (Irwin et al. 2018) |
 
+## Project Background · 项目背景
+
+This tool was born out of practical necessity while screening large compound sets:
+
+本项目源于实际筛选大量化合物时的需求：
+
+1. **SwissTargetPrediction first · 最初使用 SwissTargetPrediction** — The public web server limits bulk queries; aggressive request rates trigger access restrictions on the IP. SwissTargetPrediction 公共网站对批量查询有限制，请求过快会触发 IP 访问限制。
+2. **SEA web server next · 改用 SEA 网站** — The new SEA website (sea.bkslab.org) has anti-crawling measures, and the old version is slow (~90 seconds per query), making batch screening impractical. SEA 新版网站有反爬措施，旧版查询约 90 秒一个，批量筛选不可行。
+3. **Local deployment · 最终本地化部署** — Downloaded the full ChEMBL SQLite database and deployed SEA+TC locally. No rate limits, ~170ms per query, fully reproducible. 下载完整 ChEMBL 数据库，本地部署 SEA+TC。无速率限制，单次约 170ms，结果完全可复现。
+
+> **Important · 重要**：This is a prediction tool. Results may differ from official web servers (SwissTargetPrediction, SEA, etc.) due to database versions, cutoffs, and algorithm parameters. **All predictions must be confirmed by experiments.** 这是预测工具，结果可能与官方网站（SwissTargetPrediction、SEA 等）不完全一致——数据库版本、阈值、算法参数不同都会导致差异。**一切预测结果以实验为准。**
+
 ## Setup · 环境配置
 
 ### 1. Install dependencies · 安装依赖
