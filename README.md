@@ -25,7 +25,7 @@ This tool was born out of practical necessity while screening large compound set
 
 本项目源于实际筛选大量化合物时的需求：
 
-1. **SwissTargetPrediction first · 最初使用 SwissTargetPrediction** — The public web server limits bulk queries; aggressive request rates trigger access restrictions on the IP. SwissTargetPrediction 公共网站对批量查询有限制，请求过快会触发 IP 访问限制。
+1. **SwissTargetPrediction first · 最初使用 SwissTargetPrediction** — This site **actively bans IPs** for bulk queries. We first tried to work around it locally and got our local IP banned; after deploying to a server, running it directly without knowing this got the **server IP banned too**. SwissTargetPrediction 会**主动封禁 IP**。最初在本地尝试绕过限制，本地 IP 被封；之后部署到服务器，因事先不知情直接运行，服务器 IP 也被封禁。
 2. **SEA web server next · 改用 SEA 网站** — The new SEA website (sea.bkslab.org) has anti-crawling measures, and the old version is slow (~90 seconds per query), making batch screening impractical. SEA 新版网站有反爬措施，旧版查询约 90 秒一个，批量筛选不可行。
 3. **Local deployment · 最终本地化部署** — Downloaded the full ChEMBL SQLite database and deployed SEA+TC locally. No rate limits, ~170ms per query, fully reproducible. 下载完整 ChEMBL 数据库，本地部署 SEA+TC。无速率限制，单次约 170ms，结果完全可复现。
 
