@@ -30,7 +30,7 @@ tar -xzf compounds-targets-data.tar.gz
 python scripts/compounds_target_pred.py \
   --smiles "CC(=O)Oc1ccccc1C(=O)O" --pvalue 0.05 --top-n 5
 
-# Output → result/pred_<hash>_<ts>.json
+# Output → result/<smiles>_<ts>.json
 ```
 
 Results are saved to the `result/` directory in JSON format.

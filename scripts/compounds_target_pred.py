@@ -14,6 +14,7 @@ import argparse
 import json
 import hashlib
 import os
+import re
 import sys
 from datetime import datetime, timezone
 from typing import List, Dict, Optional
@@ -130,7 +131,7 @@ def main():
                         help="MaxTc cutoff for SEA+TC (default: 0.4)")
     parser.add_argument("--cache-dir", default=".cache",
                         help="Cache directory (default: .cache)")
-    parser.add_argument("--output", help="Output JSON file path (default: result/pred_<hash>_<ts>.json or result/batch_<ts>.json)")
+    parser.add_argument("--output", help="Output JSON file path (default: result/<smiles>_<ts>.json or result/batch_<ts>.json)")
     parser.add_argument("--input-manifest", help="Path for input manifest JSON")
     parser.add_argument("--top-n", type=int, default=50,
                         help="Return top N predictions (default: 50, use 0 for all)")
@@ -231,12 +232,13 @@ def main():
     output_path = args.output
     if not output_path:
         os.makedirs("result", exist_ok=True)
+        ts = datetime.now().strftime("%Y%m%d_%H%M%S")
         if len(smiles_list) == 1 and args.smiles:
-            smi_hash = hashlib.md5(smiles_list[0].encode()).hexdigest()[:8]
-            ts = datetime.now().strftime("%Y%m%d_%H%M%S")
-            output_path = f"result/pred_{smi_hash}_{ts}.json"
+            # Use the SMILES (filesystem-safe) as filename: <smiles>_<timestamp>.json
+            safe = re.sub(r"[^A-Za-z0-9]+", "_", smiles_list[0]).strip("_")
+            safe = safe[:40] or "compound"
+            output_path = f"result/{safe}_{ts}.json"
         else:
-            ts = datetime.now().strftime("%Y%m%d_%H%M%S")
             output_path = f"result/batch_{ts}.json"
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(out)
