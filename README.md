@@ -175,3 +175,7 @@ There is **no single universal accuracy number** for target prediction — it de
 - Keiser et al. (2009) *Nature* 462, 175–181
 - Irwin et al. (2018) *J. Chem. Inf. Model.* 58(7)
 - [SEA Wiki (Shoichet Lab)](https://wiki.docking.org/index.php/Category:SEA)
+
+---
+
+2026.6.30-2026.8.7实习期间完成，没工资，只有一张证明，想着留一个纪念从而上传，没指望会有人看到，但毕竟这是我本人第一个正儿八经的项目，虽然没啥含金量。如果项目有问题，可以及时联系，我会尽快修改
