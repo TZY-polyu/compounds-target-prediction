@@ -21,7 +21,7 @@ Predict protein targets for small-molecule compounds using **SEA+TC** (Similarit
 
 ```bash
 # 1. Install dependencies
-pip install rdkit numpy scipy
+pip install rdkit numpy
 
 # 2. Extract pre-built data (one-time)
 tar -xzf compounds-targets-data.tar.gz
@@ -95,7 +95,7 @@ There is **no single universal accuracy number** for target prediction — it de
 ### 1. Install dependencies
 
 ```bash
-pip install rdkit numpy scipy
+pip install rdkit numpy
 ```
 
 ### 2. Extract pre-built data (recommended)
@@ -121,8 +121,10 @@ python scripts/download_chembl.py
 # → Downloads, extracts, auto-generates target_info.json
 
 # Then extract targets → fingerprints → calibrate
-python scripts/local_sea/data_extract.py chembl.db --output compounds-targets-data/
-python scripts/local_sea/fingerprints.py ...
+python scripts/local_sea/data_extract.py chembl.db \
+  --output compounds-targets-data/target_ligands.pkl \
+  --to-fingerprints
+# → target_ligands.pkl + target_fps.pkl
 ```
 
 → Full guide: [SKILL.md](SKILL.md#regenerating-the-fingerprint-database)

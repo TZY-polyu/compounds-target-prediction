@@ -22,7 +22,7 @@ Novel SMILES → ECFP4 fingerprint → SEA statistical test against 4309 target 
 ### Prerequisites
 
 ```bash
-pip install rdkit numpy scipy
+pip install rdkit numpy
 ```
 
 ### Extract Pre-built Data (Default)
@@ -98,7 +98,7 @@ scripts/
 └── local_sea/
     ├── data_extract.py        ← ChEMBL → target-ligand extraction + fingerprints
     ├── fingerprints.py        ← ECFP4 fingerprint computation
-    ├── calibration.py         ← EVD fit parameters loading
+    ├── calibration.py         ← EVD background model calibration (fits μ/φ/η; optional — pre-calibrated fit_params.json is bundled)
     └── predictor.py           ← SEA+TC prediction engine (P-value OR MaxTc)
 
 result/                    ← Prediction output directory (auto-created)
@@ -202,7 +202,7 @@ Downstream tools can read `valid_count` / `invalid_count` to decide whether to p
 | `results` | array | Successful predictions |
 | `errors` | array | Failed compounds with SMILES and error message |
 | `target_key` | str | ChEMBL target ID (e.g. `CHEMBL230`) |
-| `target_name` | str | HGNC gene symbol (e.g. `PTGS2`) — auto-loaded from `data/target_info.json`; falls back to protein name or CHEMBL ID if unavailable |
+| `target_name` | str | HGNC gene symbol (e.g. `PTGS2`) — auto-loaded from `compounds-targets-data/target_info.json`; falls back to protein name or CHEMBL ID if unavailable |
 | `gene_symbol` | str | Same as `target_name`; provided for compatibility with downstream tools such as `target-intersect` that expect a `gene_symbol` field |
 | `description` | str | Full protein description with organism (auto-loaded) |
 | `pvalue` | float | SEA statistical significance — **smaller = more confident** |
@@ -224,7 +224,6 @@ Downstream tools can read `valid_count` / `invalid_count` to decide whether to p
 | Python 3.9+ | Runtime |
 | RDKit | ECFP4 fingerprint computation |
 | NumPy | Array operations |
-| SciPy | Extreme value distribution fitting |
 
 ## Setup: Target Metadata (Gene Symbols)
 

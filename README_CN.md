@@ -21,7 +21,7 @@
 
 ```bash
 # 1. 安装依赖
-pip install rdkit numpy scipy
+pip install rdkit numpy
 
 # 2. 解压预构建数据（只需一次）
 tar -xzf compounds-targets-data.tar.gz
@@ -95,7 +95,7 @@ python scripts/compounds_target_pred.py \
 ### 1. 安装依赖
 
 ```bash
-pip install rdkit numpy scipy
+pip install rdkit numpy
 ```
 
 ### 2. 解压预构建数据（推荐，开箱即用）
@@ -121,8 +121,10 @@ python scripts/download_chembl.py
 # → 下载、解压、自动生成 target_info.json
 
 # 然后提取靶点 → 计算指纹 → 校准
-python scripts/local_sea/data_extract.py chembl.db --output compounds-targets-data/
-python scripts/local_sea/fingerprints.py ...
+python scripts/local_sea/data_extract.py chembl.db \
+  --output compounds-targets-data/target_ligands.pkl \
+  --to-fingerprints
+# → target_ligands.pkl + target_fps.pkl
 ```
 
 → 完整指南：[SKILL.md](SKILL.md#regenerating-the-fingerprint-database)

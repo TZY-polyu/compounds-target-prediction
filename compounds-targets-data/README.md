@@ -1,6 +1,6 @@
 # 数据说明
 
-本文件夹 (`compounds-targets`) 存放 `compounds-target-prediction` skill 运行所需的预构建数据文件。该 skill 使用 **SEA+TC**（Similarity Ensemble Approach + Tanimoto Coefficient）算法，从小分子化合物的 SMILES 预测其可能结合的蛋白靶点。
+本文件夹 (`compounds-targets-data`) 存放 `compounds-target-prediction` skill 运行所需的预构建数据文件。该 skill 使用 **SEA+TC**（Similarity Ensemble Approach + Tanimoto Coefficient）算法，从小分子化合物的 SMILES 预测其可能结合的蛋白靶点。
 
 ---
 
@@ -66,7 +66,7 @@ P-value < cutoff   OR   MaxTc >= 0.4
 
 - **P-value**：SEA 集合相似性的统计显著性，越小表示越显著。
 - **MaxTc**：查询化合物与靶点已知配体之间的最大 Tanimoto 系数，取值 0–1，越大表示结构越相似。
-- 默认参数：`--pvalue 1.0`，`--maxtc 0.4`。
+- 默认参数：`--pvalue 0.05`，`--maxtc 0.4`。
 
 ### 2. 排序规则
 
@@ -77,7 +77,7 @@ P-value < cutoff   OR   MaxTc >= 0.4
 
 ### 3. Top-N 截取
 
-- 默认 `--top-n 5`，仅返回排序后的前 5 个靶点。
+- 默认 `--top-n 50`，仅返回排序后的前 50 个靶点。
 - 设置 `--top-n 0` 返回全部阳性预测结果。
 - 输出字段包括：`target_key`（ChEMBL ID）、`target_name`（基因符号）、`gene_symbol`（与 `target_name` 同值，用于下游 `target-intersect` 匹配）、`description`、`pvalue`、`maxtc`、`probability`。
 
@@ -115,7 +115,7 @@ P-value < cutoff   OR   MaxTc >= 0.4
 skill 入口脚本：
 
 ```bash
-python /path/to/opencode_AISNPT/.opencode/skills/compounds-target-prediction/scripts/compounds_target_pred.py \
+python scripts/compounds_target_pred.py \
   --smiles "CC(=O)Oc1ccccc1C(=O)O" \
   --pvalue 0.05 \
   --top-n 5
