@@ -1,0 +1,501 @@
+Target,Common name,Uniprot ID,ChEMBL ID,Target Class,Probability*,Known actives (3D/2D),input_smiles
+Nicotinate phosphoribosyltransferase,NAPRT,Q6XQN6,CHEMBL4523354,Ligase,1.0,13 / 3,CC(=O)OC1=CC=CC=C1C(=O)O
+Prostaglandin G/H synthase 2,PTGS2,P35354,CHEMBL230,Oxidoreductase,1.0,766 / 32,CC(=O)OC1=CC=CC=C1C(=O)O
+Prostaglandin G/H synthase 1,PTGS1,P23219,CHEMBL221,Oxidoreductase,1.0,175 / 20,CC(=O)OC1=CC=CC=C1C(=O)O
+Sodium-dependent dopamine transporter,SLC6A3,Q01959,CHEMBL238,Electrochemical transporter,0.6588440402138394,1064 / 22,CC(=O)OC1=CC=CC=C1C(=O)O
+Carbonic anhydrase 2,CA2,P00918,CHEMBL205,Lyase,0.5339388050453484,2245 / 67,CC(=O)OC1=CC=CC=C1C(=O)O
+Carbonic anhydrase 9,CA9,Q16790,CHEMBL3594,Lyase,0.5114287364106143,1428 / 41,CC(=O)OC1=CC=CC=C1C(=O)O
+Carbonic anhydrase 1,CA1,P00915,CHEMBL261,Lyase,0.5114287364106143,1890 / 59,CC(=O)OC1=CC=CC=C1C(=O)O
+Carbonic anhydrase 12,CA12,O43570,CHEMBL3242,Lyase,0.5114287364106143,1168 / 41,CC(=O)OC1=CC=CC=C1C(=O)O
+Complement factor D,CFD,P00746,CHEMBL2176771,Protease,0.4904446173048515,567 / 10,CC(=O)OC1=CC=CC=C1C(=O)O
+Carbonic anhydrase 14,CA14,Q9ULX7,CHEMBL3510,Lyase,0.4726042642060004,202 / 26,CC(=O)OC1=CC=CC=C1C(=O)O
+Carbonic anhydrase 7,CA7,P43166,CHEMBL2326,Lyase,0.4726042642060004,346 / 30,CC(=O)OC1=CC=CC=C1C(=O)O
+Estrogen receptor beta,ESR2,Q92731,CHEMBL242,Nuclear receptor,0.4045950709376894,97 / 40,CC(=O)OC1=CC=CC=C1C(=O)O
+Thymidylate synthase,TYMS,P04818,CHEMBL1952,Transferase,0.284795694043296,233 / 9,CC(=O)OC1=CC=CC=C1C(=O)O
+Retinoic acid receptor RXR-beta,RXRB,P28702,CHEMBL1870,Nuclear receptor,0.2657687305790519,145 / 33,CC(=O)OC1=CC=CC=C1C(=O)O
+Retinoic acid receptor RXR-alpha,RXRA,P19793,CHEMBL2061,Nuclear receptor,0.2657687305790519,323 / 41,CC(=O)OC1=CC=CC=C1C(=O)O
+Prostaglandin D2 receptor 2,PTGDR2,Q9Y5Y4,CHEMBL5071,Family A G protein-coupled receptor,0.2520371857345276,2363 / 33,CC(=O)OC1=CC=CC=C1C(=O)O
+Serine protease 1,PRSS1,P07477,CHEMBL209,Protease,0.2442905707200027,453 / 40,CC(=O)OC1=CC=CC=C1C(=O)O
+Amine oxidase [flavin-containing] B,MAOB,P27338,CHEMBL2039,Oxidoreductase,0.2333059591850195,985 / 282,CC(=O)OC1=CC=CC=C1C(=O)O
+Histone deacetylase 6,HDAC6,Q9UBN7,CHEMBL1865,Eraser,0.2328937693506604,2664 / 11,CC(=O)OC1=CC=CC=C1C(=O)O
+Tyrosine-protein phosphatase non-receptor type 1,PTPN1,P18031,CHEMBL335,Phosphatase,0.2154457256047276,644 / 46,CC(=O)OC1=CC=CC=C1C(=O)O
+Glutamate carboxypeptidase 2,FOLH1,Q04609,CHEMBL1892,Protease,0.2124886122468224,246 / 11,CC(=O)OC1=CC=CC=C1C(=O)O
+Poly [ADP-ribose] polymerase 1,PARP1,P09874,CHEMBL3105,Transferase,0.2114898447429209,2079 / 29,CC(=O)OC1=CC=CC=C1C(=O)O
+Bile acid receptor,NR1H4,Q96RI1,CHEMBL2047,Nuclear receptor,0.2076133675489198,1032 / 56,CC(=O)OC1=CC=CC=C1C(=O)O
+Neutrophil elastase,ELANE,P08246,CHEMBL248,Protease,0.1966753054954946,261 / 47,CC(=O)OC1=CC=CC=C1C(=O)O
+Heat shock protein HSP 90-alpha,HSP90AA1,P07900,CHEMBL3880,Other cytosolic protein,0.1773165391324642,299 / 12,CC(=O)OC1=CC=CC=C1C(=O)O
+Protein mono-ADP-ribosyltransferase PARP10,PARP10,Q53GL7,CHEMBL2429708,Transferase,0.176770266068246,64 / 38,CC(=O)OC1=CC=CC=C1C(=O)O
+Peroxisome proliferator-activated receptor alpha,PPARA,Q07869,CHEMBL239,Nuclear receptor,0.1731340434179349,1071 / 105,CC(=O)OC1=CC=CC=C1C(=O)O
+Prostaglandin E synthase,PTGES,O14684,CHEMBL5658,Isomerase,0.1716142199866334,263 / 10,CC(=O)OC1=CC=CC=C1C(=O)O
+Retinoic acid receptor RXR-gamma,RXRG,P48443,CHEMBL2004,Nuclear receptor,0.1683293979543922,99 / 19,CC(=O)OC1=CC=CC=C1C(=O)O
+Amine oxidase [flavin-containing] A,MAOA,P21397,CHEMBL1951,Oxidoreductase,0.1581740533788485,413 / 65,CC(=O)OC1=CC=CC=C1C(=O)O
+Acrosin,ACR,P10323,CHEMBL2738,Protease,0.1511134896399219,28 / 25,CC(=O)OC1=CC=CC=C1C(=O)O
+"Carbonic anhydrase 5B, mitochondrial",CA5B,Q9Y2D0,CHEMBL3969,Lyase,0.1452579925757267,139 / 3,CC(=O)OC1=CC=CC=C1C(=O)O
+"Carbonic anhydrase 5A, mitochondrial",CA5A,P35218,CHEMBL4789,Lyase,0.1452579925757267,139 / 5,CC(=O)OC1=CC=CC=C1C(=O)O
+Carbonic anhydrase 6,CA6,P23280,CHEMBL3025,Lyase,0.1452579925757267,85 / 5,CC(=O)OC1=CC=CC=C1C(=O)O
+Carbonic anhydrase 4,CA4,P22748,CHEMBL3729,Lyase,0.1452579925757267,393 / 8,CC(=O)OC1=CC=CC=C1C(=O)O
+Carbonic anhydrase 3,CA3,P07451,CHEMBL2885,Lyase,0.1452579925757267,29 / 3,CC(=O)OC1=CC=CC=C1C(=O)O
+Aldo-keto reductase family 1 member C3,AKR1C3,P42330,CHEMBL4681,Oxidoreductase,0.1446143408431974,482 / 49,CC(=O)OC1=CC=CC=C1C(=O)O
+Induced myeloid leukemia cell differentiation protein Mcl-1,MCL1,Q07820,CHEMBL4361,Other cytosolic protein,0.1399288892299214,625 / 29,CC(=O)OC1=CC=CC=C1C(=O)O
+Nuclear receptor subfamily 4 group A member 2,NR4A2,P43354,CHEMBL5002,Nuclear receptor,0.129414388865881,57 / 16,CC(=O)OC1=CC=CC=C1C(=O)O
+Nuclear receptor subfamily 4immunitygroup A member 1,NR4A1,P22736,CHEMBL1293229,Nuclear receptor,0.129414388865881,26 / 4,CC(=O)OC1=CC=CC=C1C(=O)O
+Interleukin-1 receptor-associated kinase 4,IRAK4,Q9NWZ3,CHEMBL3778,Kinase,0.1238895848225191,3104 / 24,CC(=O)OC1=CC=CC=C1C(=O)O
+Tyrosine-protein phosphatase non-receptor type 11,PTPN11,Q06124,CHEMBL3864,Phosphatase,0.120863501795897,945 / 19,CC(=O)OC1=CC=CC=C1C(=O)O
+"Indoleamine 2,3-dioxygenase 1",IDO1,P14902,CHEMBL4685,Oxidoreductase,0.1199026248021816,771 / 18,CC(=O)OC1=CC=CC=C1C(=O)O
+Histone deacetylase 1,HDAC1,Q13547,CHEMBL325,Eraser,0.1163784882961949,3177 / 11,CC(=O)OC1=CC=CC=C1C(=O)O
+2-amino-3-carboxymuconate-6-semialdehyde decarboxylase,ACMSD,Q8TDX5,CHEMBL4105941,Lyase,0.1155499729480918,28 / 7,CC(=O)OC1=CC=CC=C1C(=O)O
+Tyrosine-protein phosphatase non-receptor type 2,PTPN2,P17706,CHEMBL3807,Phosphatase,0.1148455058738324,119 / 6,CC(=O)OC1=CC=CC=C1C(=O)O
+Aldo-keto reductase family 1 member C2,AKR1C2,P52895,CHEMBL5847,Oxidoreductase,0.1132245463969818,170 / 46,CC(=O)OC1=CC=CC=C1C(=O)O
+L-lactate dehydrogenase A chain,LDHA,P00338,CHEMBL4835,Oxidoreductase,0.1119869321691698,148 / 15,CC(=O)OC1=CC=CC=C1C(=O)O
+High mobility group protein B1,HMGB1,P09429,CHEMBL2311236,Unclassified protein,0.1117538273627477,1 / 2,CC(=O)OC1=CC=CC=C1C(=O)O
+Aldo-keto reductase family 1 member C1,AKR1C1,Q04828,CHEMBL5905,Oxidoreductase,0.1102392821680521,32 / 14,CC(=O)OC1=CC=CC=C1C(=O)O
+"Glutamate receptor ionotropic, kainate 1",GRIK1,P39086,CHEMBL1918,Ligand-gated ion channel,0.1084338976521709,151 / 9,CC(=O)OC1=CC=CC=C1C(=O)O
+Histone deacetylase 2,HDAC2,Q92769,CHEMBL1937,Eraser,0.1083800768623212,1033 / 6,CC(=O)OC1=CC=CC=C1C(=O)O
+Histone deacetylase 3,HDAC3,O15379,CHEMBL1829,Eraser,0.1083800768623212,954 / 4,CC(=O)OC1=CC=CC=C1C(=O)O
+Xanthine dehydrogenase/oxidase,XDH,P47989,CHEMBL1929,Oxidoreductase,0.1083036572723726,154 / 39,CC(=O)OC1=CC=CC=C1C(=O)O
+Histone deacetylase 8,HDAC8,Q9BY41,CHEMBL3192,Eraser,0.1069352192659876,1268 / 8,CC(=O)OC1=CC=CC=C1C(=O)O
+Acetylcholinesterase,ACHE,P22303,CHEMBL220,Hydrolase,0.1048027743019201,1287 / 34,CC(=O)OC1=CC=CC=C1C(=O)O
+"Fatty acid-binding protein, adipocyte",FABP4,P15090,CHEMBL2083,Fatty acid binding protein family,0.1023987902241567,486 / 15,CC(=O)OC1=CC=CC=C1C(=O)O
+Solute carrier family 22 member 12,SLC22A12,Q96S37,CHEMBL6120,Electrochemical transporter,0.101252213500079,328 / 16,CC(=O)OC1=CC=CC=C1C(=O)O
+DNA repair nuclease/redox regulator APEX1,APEX1,P27695,CHEMBL5619,Enzyme,0.0962854675444399,43 / 2,CC(=O)OC1=CC=CC=C1C(=O)O
+Caspase-3,CASP3,P42574,CHEMBL2334,Protease,0.0937835613491644,494 / 4,CC(=O)OC1=CC=CC=C1C(=O)O
+Kynurenine 3-monooxygenase,KMO,O15229,CHEMBL2145,Oxidoreductase,0.0937587547736839,157 / 3,CC(=O)OC1=CC=CC=C1C(=O)O
+D-amino-acid oxidase,DAO,P14920,CHEMBL5485,Oxidoreductase,0.0901397018195534,180 / 1,CC(=O)OC1=CC=CC=C1C(=O)O
+Protein mono-ADP-ribosyltransferase PARP15,PARP15,Q460N3,CHEMBL2176778,Transferase,0.0874289603841721,33 / 15,CC(=O)OC1=CC=CC=C1C(=O)O
+Plasminogen activator inhibitor 1,SERPINE1,P05121,CHEMBL3475,Secreted protein,0.086279590119105,52 / 11,CC(=O)OC1=CC=CC=C1C(=O)O
+Peroxisome proliferator-activated receptor gamma,PPARG,P37231,CHEMBL235,Nuclear receptor,0.0856299381776136,1607 / 89,CC(=O)OC1=CC=CC=C1C(=O)O
+Cytochrome P450 4A11,CYP4A11,Q02928,CHEMBL3978,Cytochrome P450,0.0850538461779526,397 / 11,CC(=O)OC1=CC=CC=C1C(=O)O
+11-beta-hydroxysteroid dehydrogenase 1,HSD11B1,P28845,CHEMBL4235,Oxidoreductase,0.0845951072804921,353 / 3,CC(=O)OC1=CC=CC=C1C(=O)O
+Protein mono-ADP-ribosyltransferase PARP14,PARP14,Q460N5,CHEMBL2176777,Transferase,0.084399093178703,87 / 2,CC(=O)OC1=CC=CC=C1C(=O)O
+Transthyretin,TTR,P02766,CHEMBL3194,Secreted protein,0.0827080145326788,73 / 32,CC(=O)OC1=CC=CC=C1C(=O)O
+Retinoic acid receptor gamma,RARG,P13631,CHEMBL2003,Nuclear receptor,0.0809757099338315,108 / 43,CC(=O)OC1=CC=CC=C1C(=O)O
+Retinoic acid receptor beta,RARB,P10826,CHEMBL2008,Nuclear receptor,0.0809757099338315,99 / 41,CC(=O)OC1=CC=CC=C1C(=O)O
+Retinoic acid receptor alpha,RARA,P10276,CHEMBL2055,Nuclear receptor,0.0809757099338315,90 / 30,CC(=O)OC1=CC=CC=C1C(=O)O
+"Fatty acid-binding protein, heart",FABP3,P05413,CHEMBL3344,Fatty acid binding protein family,0.0796883812010615,69 / 11,CC(=O)OC1=CC=CC=C1C(=O)O
+"Glutamate receptor ionotropic, NMDA 2B",GRIN2B,Q13224,CHEMBL1904,Ligand-gated ion channel,0.0783287102959082,153 / 2,CC(=O)OC1=CC=CC=C1C(=O)O
+Histone deacetylase 11,HDAC11,Q96DB2,CHEMBL3310,Eraser,0.0773872174151508,219 / 1,CC(=O)OC1=CC=CC=C1C(=O)O
+Polyunsaturated fatty acid 5-lipoxygenase,ALOX5,P09917,CHEMBL215,Oxidoreductase,0.0769007953581414,361 / 57,CC(=O)OC1=CC=CC=C1C(=O)O
+Aldo-keto reductase family 1 member B1,AKR1B1,P15121,CHEMBL1900,Oxidoreductase,0.0767788532068378,440 / 33,CC(=O)OC1=CC=CC=C1C(=O)O
+Cytochrome P450 4F2,CYP4F2,P78329,CHEMBL3379,Cytochrome P450,0.0754435555195354,333 / 7,CC(=O)OC1=CC=CC=C1C(=O)O
+Fatty acid-binding protein 5,FABP5,Q01469,CHEMBL3674,Fatty acid binding protein family,0.0750376625545482,337 / 13,CC(=O)OC1=CC=CC=C1C(=O)O
+Polyamine deacetylase HDAC10,HDAC10,Q969S8,CHEMBL5103,Eraser,0.0738827062391444,198 / 2,CC(=O)OC1=CC=CC=C1C(=O)O
+Dipeptidyl peptidase 4,DPP4,P27487,CHEMBL284,Protease,0.0726981969114307,2008 / 6,CC(=O)OC1=CC=CC=C1C(=O)O
+72 kDa type IV collagenase,MMP2,P08253,CHEMBL333,Protease,0.0726479641135804,1964 / 6,CC(=O)OC1=CC=CC=C1C(=O)O
+Protein phosphatase 1B,PPM1B,O75688,CHEMBL2845,Phosphatase,0.0714125456516785,6 / 1,CC(=O)OC1=CC=CC=C1C(=O)O
+Prostaglandin E2 receptor EP1 subtype,PTGER1,P34995,CHEMBL1811,Family A G protein-coupled receptor,0.0713119745526851,396 / 20,CC(=O)OC1=CC=CC=C1C(=O)O
+Leukotriene A-4 hydrolase,LTA4H,P09960,CHEMBL4618,Protease,0.0705623672387657,781 / 36,CC(=O)OC1=CC=CC=C1C(=O)O
+Free fatty acid receptor 4,FFAR4,Q5NUL3,CHEMBL5339,Family A G protein-coupled receptor,0.0701822830113961,586 / 62,CC(=O)OC1=CC=CC=C1C(=O)O
+Neutral cholesterol ester hydrolase 1,NCEH1,Q6PIU2,CHEMBL5048,Hydrolase,0.0695499422617875,0 / 6,CC(=O)OC1=CC=CC=C1C(=O)O
+Prothrombin,F2,P00734,CHEMBL204,Protease,0.0690440122848622,1678 / 20,CC(=O)OC1=CC=CC=C1C(=O)O
+Alpha-ketoglutarate-dependent dioxygenase FTO,FTO,Q9C0B1,CHEMBL2331065,Oxidoreductase,0.0672792424351008,85 / 5,CC(=O)OC1=CC=CC=C1C(=O)O
+5-hydroxytryptamine receptor 3A,HTR3A,P46098,CHEMBL1899,Ligand-gated ion channel,0.0671816113351962,495 / 3,CC(=O)OC1=CC=CC=C1C(=O)O
+Tyrosine-protein kinase Fyn,FYN,P06241,CHEMBL1841,Kinase,0.0671280966051798,219 / 1,CC(=O)OC1=CC=CC=C1C(=O)O
+Tyrosine-protein kinase Lck,LCK,P06239,CHEMBL258,Kinase,0.0671280966051798,400 / 3,CC(=O)OC1=CC=CC=C1C(=O)O
+Plasminogen,PLG,P00747,CHEMBL1801,Protease,0.0669938397238426,131 / 8,CC(=O)OC1=CC=CC=C1C(=O)O
+Metabotropic glutamate receptor 2,GRM2,Q14416,CHEMBL5137,Family C G protein-coupled receptor,0.0659815048027177,245 / 10,CC(=O)OC1=CC=CC=C1C(=O)O
+Cathepsin D,CTSD,P07339,CHEMBL2581,Protease,0.0646884053928368,510 / 2,CC(=O)OC1=CC=CC=C1C(=O)O
+Thromboxane-A synthase,TBXAS1,P24557,CHEMBL1835,Cytochrome P450,0.0640913599204806,433 / 10,CC(=O)OC1=CC=CC=C1C(=O)O
+Sodium-dependent noradrenaline transporter,SLC6A2,P23975,CHEMBL222,Electrochemical transporter,0.0640262279969087,1405 / 29,CC(=O)OC1=CC=CC=C1C(=O)O
+Prostaglandin E2 receptor EP2 subtype,PTGER2,P43116,CHEMBL1881,Family A G protein-coupled receptor,0.0630860351452987,247 / 21,CC(=O)OC1=CC=CC=C1C(=O)O
+Farnesyl pyrophosphate synthase,FDPS,P14324,CHEMBL1782,Transferase,0.0615215363027368,10 / 1,CC(=O)OC1=CC=CC=C1C(=O)O
+5-hydroxytryptamine receptor 1A,HTR1A,P08908,CHEMBL214,Family A G protein-coupled receptor,0.0614798755257257,2553 / 40,CC(=O)OC1=CC=CC=C1C(=O)O
+Nuclear receptor subfamily 2 group E member 1,NR2E1,Q9Y466,CHEMBL1961788,Nuclear receptor,1.0,21 / 1,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+"NAD-dependent protein deacetylase sirtuin-3, mitochondrial",SIRT3,Q9NTG7,CHEMBL4461,Eraser,1.0,63 / 7,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Adenosine receptor A2a,ADORA2A,P29274,CHEMBL251,Family A G protein-coupled receptor,1.0,2246 / 521,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Acetylcholinesterase,ACHE,P22303,CHEMBL220,Hydrolase,1.0,616 / 20,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Adenosine receptor A2b,ADORA2B,P29275,CHEMBL255,Family A G protein-coupled receptor,0.9659757078224162,982 / 668,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Adenosine receptor A1,ADORA1,P30542,CHEMBL226,Family A G protein-coupled receptor,0.9502918846372304,2004 / 450,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Adenosine receptor A3,ADORA3,P0DMS8,CHEMBL256,Family A G protein-coupled receptor,0.9502918846372304,2175 / 300,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Legumain,LGMN,Q99538,CHEMBL4244,Protease,0.8813450449225405,52 / 4,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+"cGMP-inhibited 3',5'-cyclic phosphodiesterase 3A",PDE3A,Q14432,CHEMBL241,Phosphodiesterase,0.8677893409192023,68 / 11,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+"cGMP-inhibited 3',5'-cyclic phosphodiesterase 3B",PDE3B,Q13370,CHEMBL290,Phosphodiesterase,0.8677893409192023,41 / 1,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+"cGMP-specific 3',5'-cyclic phosphodiesterase",PDE5A,O76074,CHEMBL1827,Phosphodiesterase,0.8677893409192023,430 / 101,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+"cGMP-dependent 3',5'-cyclic phosphodiesterase",PDE2A,O00408,CHEMBL2652,Phosphodiesterase,0.8677893409192023,1205 / 58,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Bromodomain testis-specific protein,BRDT,Q58F21,CHEMBL1795185,Reader,0.8531875749702611,69 / 2,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Bromodomain-containing protein 3,BRD3,Q15059,CHEMBL1795186,Reader,0.8531875749702611,355 / 2,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Bromodomain-containing protein 2,BRD2,P25440,CHEMBL1293289,Reader,0.8531875749702611,347 / 2,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Bromodomain-containing protein 4,BRD4,O60885,CHEMBL1163125,Reader,0.8531875749702611,2890 / 21,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Guanine deaminase,GDA,Q9Y2T3,CHEMBL3129,Hydrolase,0.757534572538631,4 / 5,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Acidic mammalian chitinase,CHIA,Q9BZP6,CHEMBL1293197,Hydrolase,0.5443800254314795,3 / 2,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Chitotriosidase-1,CHIT1,Q13231,CHEMBL3080,Hydrolase,0.5443800254314795,10 / 2,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Lysine-specific histone demethylase 1A,KDM1A,O60341,CHEMBL6136,Eraser,0.4620615295664783,177 / 3,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Transient receptor potential cation channel subfamily A member 1,TRPA1,O75762,CHEMBL6007,Voltage-gated ion channel,0.4473083212643616,827 / 182,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+"3',5'-cyclic-AMP phosphodiesterase 4A",PDE4A,P27815,CHEMBL254,Phosphodiesterase,0.3981997859667334,302 / 4,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Mitogen-activated protein kinase 10,MAPK10,P53779,CHEMBL2637,Kinase,0.3534870714158496,453 / 24,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+"Sulfonylurea receptor 1, Kir6.2",,Q14654&Q09428,CHEMBL2096972,Voltage-gated ion channel,0.3132252545276439,29 / 1,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Amine oxidase [flavin-containing] A,MAOA,P21397,CHEMBL1951,Oxidoreductase,0.3006034460442235,402 / 41,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Amine oxidase [flavin-containing] B,MAOB,P27338,CHEMBL2039,Oxidoreductase,0.2799357247414517,877 / 155,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Serine/threonine-protein kinase B-raf,BRAF,P15056,CHEMBL5145,Kinase,0.272266042781653,1462 / 5,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+NAD-dependent protein deacetylase sirtuin-2,SIRT2,Q8IXJ6,CHEMBL4462,Eraser,0.1949175555172401,189 / 1,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+NAD-dependent protein deacetylase sirtuin-1,SIRT1,Q96EB6,CHEMBL4506,Eraser,0.1802434848950659,93 / 6,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Mu-type opioid receptor,OPRM1,P35372,CHEMBL233,Family A G protein-coupled receptor,0.1762760335327479,73 / 19,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Muscarinic acetylcholine receptor M1,CHRM1,P11229,CHEMBL216,Family A G protein-coupled receptor,0.1670918866832031,206 / 12,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Kappa-type opioid receptor,OPRK1,P41145,CHEMBL237,Family A G protein-coupled receptor,0.160660048434,100 / 12,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Xanthine dehydrogenase/oxidase,XDH,P47989,CHEMBL1929,Oxidoreductase,0.1588254218293402,102 / 25,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+"NAD-dependent protein deacylase sirtuin-5, mitochondrial",SIRT5,Q9NXA8,CHEMBL2163183,Eraser,0.1463986883418974,8 / 6,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Alpha-1B adrenergic receptor,ADRA1B,P35368,CHEMBL232,Family A G protein-coupled receptor,0.1449208767308785,53 / 15,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Alpha-1A adrenergic receptor,ADRA1A,P35348,CHEMBL229,Family A G protein-coupled receptor,0.1449208767308785,62 / 8,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Sodium-dependent dopamine transporter,SLC6A3,Q01959,CHEMBL238,Electrochemical transporter,0.1400833519294079,234 / 1,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+5-hydroxytryptamine receptor 7,HTR7,P34969,CHEMBL3155,Family A G protein-coupled receptor,0.1392064000253023,108 / 37,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Muscarinic acetylcholine receptor M2,CHRM2,P08172,CHEMBL211,Family A G protein-coupled receptor,0.1323703245339587,136 / 2,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Alpha-1D adrenergic receptor,ADRA1D,P25100,CHEMBL223,Family A G protein-coupled receptor,0.1310602140707598,85 / 11,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+5-hydroxytryptamine receptor 1E,HTR1E,P28566,CHEMBL2182,Family A G protein-coupled receptor,0.1220951483997474,4 / 1,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Neuronal acetylcholine receptor; alpha3/beta2,,P17787&P32297,CHEMBL2109234,Ligand-gated ion channel,0.1220951483997474,1 / 1,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+D(2) dopamine receptor,DRD2,P14416,CHEMBL217,Family A G protein-coupled receptor,0.1206136050027275,79 / 26,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Thyroid peroxidase,TPO,P07202,CHEMBL1839,Oxidoreductase,0.1168102064551295,16 / 15,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Myeloperoxidase,MPO,P05164,CHEMBL2439,Oxidoreductase,0.1168102064551295,220 / 28,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+5-hydroxytryptamine receptor 2A,HTR2A,P28223,CHEMBL224,Family A G protein-coupled receptor,0.1150848069313516,145 / 23,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+5-hydroxytryptamine receptor 6,HTR6,P50406,CHEMBL3371,Family A G protein-coupled receptor,0.1109402073346911,299 / 18,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+"Thymidine kinase, cytosolic",TK1,P04183,CHEMBL2883,Transferase,0.110271561872771,27 / 20,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Thymidine phosphorylase,TYMP,P19971,CHEMBL3106,Enzyme,0.1068707611756133,53 / 25,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Nucleotide-binding oligomerization domain-containing protein 1,NOD1,Q9Y239,CHEMBL1293222,Unclassified protein,0.1056528901167491,37 / 5,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+dCTP pyrophosphatase 1,DCTPP1,Q9H773,CHEMBL3769292,Hydrolase,0.0992406348684066,67 / 5,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+5-hydroxytryptamine receptor 1A,HTR1A,P08908,CHEMBL214,Family A G protein-coupled receptor,0.0979817032484754,77 / 27,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+D-amino-acid oxidase,DAO,P14920,CHEMBL5485,Oxidoreductase,0.0956878732088649,93 / 2,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Aldehyde dehydrogenase 1A1,ALDH1A1,P00352,CHEMBL3577,Oxidoreductase,0.0933202976692057,127 / 19,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Tryptophan 5-hydroxylase 2,TPH2,Q8IWU9,CHEMBL5433,Oxidoreductase,0.0905492881774673,89 / 97,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Tryptophan 5-hydroxylase 1,TPH1,P17752,CHEMBL5689,Oxidoreductase,0.0905492881774673,68 / 66,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Purine nucleoside phosphorylase,PNP,P00491,CHEMBL4338,Transferase,0.0883969108965545,43 / 67,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Proprotein convertase subtilisin/kexin type 9,PCSK9,Q8NBP7,CHEMBL2929,Protease,0.0819939546358141,47 / 6,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Metabotropic glutamate receptor 4,GRM4,Q14833,CHEMBL2736,Family C G protein-coupled receptor,0.0715044822480762,326 / 32,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Nucleotide-binding oligomerization domain-containing protein 2,NOD2,Q9HC29,CHEMBL1293266,Unclassified protein,0.0676456425607128,32 / 1,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+CCR4-NOT transcription complex subunit 7,CNOT7,Q9UIV1,CHEMBL3616361,Hydrolase,0.0673428974469049,0 / 11,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Ephrin type-B receptor 4,EPHB4,P54760,CHEMBL5147,Kinase,0.066115721422029,148 / 20,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Tyrosine-protein kinase JAK3,JAK3,P52333,CHEMBL2148,Kinase,0.0652116770743074,2133 / 70,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Tyrosine-protein kinase JAK1,JAK1,P23458,CHEMBL2835,Kinase,0.0652116770743074,2752 / 77,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Tyrosine-protein kinase ABL1,ABL1,P00519,CHEMBL1862,Kinase,0.0628854705696784,832 / 4,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Glycogen synthase kinase-3 beta,GSK3B,P49841,CHEMBL262,Kinase,0.0623136249381048,1408 / 6,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Cyclin-dependent kinase 2/cyclin E1,,P24864&P24941,CHEMBL1907605,Kinase,0.0610642063056412,381 / 19,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Gamma-aminobutyric acid receptor subunit alpha-5,GABRA5,P31644,CHEMBL5112,Ligand-gated ion channel,0.060640640559054,252 / 34,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Hypoxanthine-guanine phosphoribosyltransferase,HPRT1,P00492,CHEMBL2360,Transferase,0.0604161345064364,2 / 107,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Monocarboxylate transporter 1,SLC16A1,P53985,CHEMBL4360,Electrochemical transporter,0.0596295149894449,55 / 7,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Tyrosine-protein kinase JAK2,JAK2,O60674,CHEMBL2971,Kinase,0.05901406652211,3365 / 63,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+DNA-dependent protein kinase catalytic subunit,PRKDC,P78527,CHEMBL3142,Kinase,0.0587712819874821,629 / 81,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Proto-oncogene tyrosine-protein kinase Src,SRC,P12931,CHEMBL267,Kinase,0.0582711117688458,604 / 15,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Tyrosine-protein kinase Lck,LCK,P06239,CHEMBL258,Kinase,0.0582711117688458,383 / 15,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Vascular endothelial growth factor receptor 2,KDR,P35968,CHEMBL279,Kinase,0.0573448910276618,1981 / 15,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Epidermal growth factor receptor,EGFR,P00533,CHEMBL203,Kinase,0.0545073154878128,1685 / 30,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Transitional endoplasmic reticulum ATPase,VCP,P55072,CHEMBL1075145,Primary active transporter,0.0542516224167002,117 / 1,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Beta-secretase 1,BACE1,P56817,CHEMBL4822,Protease,0.0539960127850836,2401 / 1,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Dipeptidyl peptidase 4,DPP4,P27487,CHEMBL284,Protease,0.0522313311098736,297 / 211,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Flap endonuclease 1,FEN1,P39748,CHEMBL5027,Hydrolase,0.0500086723584759,178 / 4,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Poly [ADP-ribose] polymerase 1,PARP1,P09874,CHEMBL3105,Transferase,0.049510161720977,744 / 66,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Histone deacetylase 6,HDAC6,Q9UBN7,CHEMBL1865,Eraser,0.0476822007102744,872 / 50,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+17-beta-hydroxysteroid dehydrogenase 13,HSD17B13,Q7Z5P4,CHEMBL5305042,Oxidoreductase,0.0464530588719822,0 / 3,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Cannabinoid receptor 2,CNR2,P34972,CHEMBL253,Family A G protein-coupled receptor,0.0453017964893734,2313 / 6,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Poly [ADP-ribose] polymerase tankyrase-2,TNKS2,Q9H2K2,CHEMBL6154,Transferase,0.0453006703628656,248 / 9,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Protein-serine O-palmitoleoyltransferase porcupine,PORCN,Q9H237,CHEMBL1255163,Transferase,0.04528140846978,33 / 7,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Cannabinoid receptor 1,CNR1,P21554,CHEMBL218,Family A G protein-coupled receptor,0.0440041841774773,1549 / 3,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Histone deacetylase 8,HDAC8,Q9BY41,CHEMBL3192,Eraser,0.0437051096088268,330 / 35,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Cytochrome P450 1A2,CYP1A2,P05177,CHEMBL3356,Cytochrome P450,0.0433130034691639,28 / 1,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Thromboxane-A synthase,TBXAS1,P24557,CHEMBL1835,Cytochrome P450,0.0426086199301834,76 / 2,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Tyrosine-protein kinase Yes,YES1,P07947,CHEMBL2073,Kinase,0.0424019617837067,34 / 4,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Glutamate receptor 2,GRIA2,P42262,CHEMBL4016,Ligand-gated ion channel,0.0420367507274627,63 / 6,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Mitogen-activated protein kinase 9,MAPK9,P45984,CHEMBL4179,Kinase,0.0401150666760983,250 / 16,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Mitogen-activated protein kinase 8,MAPK8,P45983,CHEMBL2276,Kinase,0.0401150666760983,524 / 21,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Glutamate receptor 1,GRIA1,P42261,CHEMBL2009,Ligand-gated ion channel,0.0398473805430458,54 / 6,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+"High affinity 3',5'-cyclic-AMP phosphodiesterase 7A",PDE7A,Q13946,CHEMBL3012,Phosphodiesterase,0.0395343037872393,202 / 10,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Neutrophil elastase,ELANE,P08246,CHEMBL248,Protease,0.0395181822007331,784 / 22,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+N-arachidonyl glycine receptor,GPR18,Q14330,CHEMBL2384898,Family A G protein-coupled receptor,0.039342236445135,5 / 3,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Lysine-specific demethylase 4C,KDM4C,Q9H3R0,CHEMBL6175,Reader,0.0393336881827036,160 / 6,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Poly [ADP-ribose] polymerase tankyrase-1,TNKS,O95271,CHEMBL6164,Transferase,0.0384031458069148,266 / 31,CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+Sodium-dependent dopamine transporter,SLC6A3,Q01959,CHEMBL238,Electrochemical transporter,1.0,7 / 329,C1=CC(=C(C=C1CCN)O)O
+Melatonin receptor type 1B,MTNR1B,P49286,CHEMBL1946,Family A G protein-coupled receptor,1.0,1 / 170,C1=CC(=C(C=C1CCN)O)O
+Melatonin receptor type 1A,MTNR1A,P48039,CHEMBL1945,Family A G protein-coupled receptor,1.0,1 / 224,C1=CC(=C(C=C1CCN)O)O
+Alpha-synuclein,SNCA,P37840,CHEMBL6152,Unclassified protein,1.0,62 / 12,C1=CC(=C(C=C1CCN)O)O
+D(3) dopamine receptor,DRD3,P35462,CHEMBL234,Family A G protein-coupled receptor,1.0,54 / 244,C1=CC(=C(C=C1CCN)O)O
+Sodium-dependent noradrenaline transporter,SLC6A2,P23975,CHEMBL222,Electrochemical transporter,1.0,8 / 295,C1=CC(=C(C=C1CCN)O)O
+D(1B) dopamine receptor,DRD5,P21918,CHEMBL1850,Family A G protein-coupled receptor,1.0,15 / 86,C1=CC(=C(C=C1CCN)O)O
+D(4) dopamine receptor,DRD4,P21917,CHEMBL219,Family A G protein-coupled receptor,1.0,19 / 117,C1=CC(=C(C=C1CCN)O)O
+D(1A) dopamine receptor,DRD1,P21728,CHEMBL2056,Family A G protein-coupled receptor,1.0,106 / 231,C1=CC(=C(C=C1CCN)O)O
+D(2) dopamine receptor,DRD2,P14416,CHEMBL217,Family A G protein-coupled receptor,1.0,85 / 332,C1=CC(=C(C=C1CCN)O)O
+Lysine-specific demethylase 4E,KDM4E,B2RXH2,CHEMBL1293226,Eraser,1.0,6 / 5,C1=CC(=C(C=C1CCN)O)O
+Alpha-1A adrenergic receptor,ADRA1A,P35348,CHEMBL229,Family A G protein-coupled receptor,0.747680212250491,7 / 40,C1=CC(=C(C=C1CCN)O)O
+Alpha-1D adrenergic receptor,ADRA1D,P25100,CHEMBL223,Family A G protein-coupled receptor,0.747680212250491,7 / 29,C1=CC(=C(C=C1CCN)O)O
+Alpha-2C adrenergic receptor,ADRA2C,P18825,CHEMBL1916,Family A G protein-coupled receptor,0.747680212250491,9 / 26,C1=CC(=C(C=C1CCN)O)O
+Alpha-2B adrenergic receptor,ADRA2B,P18089,CHEMBL1942,Family A G protein-coupled receptor,0.747680212250491,7 / 20,C1=CC(=C(C=C1CCN)O)O
+Alpha-2A adrenergic receptor,ADRA2A,P08913,CHEMBL1867,Family A G protein-coupled receptor,0.747680212250491,8 / 31,C1=CC(=C(C=C1CCN)O)O
+Beta-1 adrenergic receptor,ADRB1,P08588,CHEMBL213,Family A G protein-coupled receptor,0.747680212250491,15 / 44,C1=CC(=C(C=C1CCN)O)O
+Beta-2 adrenergic receptor,ADRB2,P07550,CHEMBL210,Family A G protein-coupled receptor,0.747680212250491,68 / 142,C1=CC(=C(C=C1CCN)O)O
+Epidermal growth factor receptor,EGFR,P00533,CHEMBL203,Kinase,0.5653785223059405,99 / 26,C1=CC(=C(C=C1CCN)O)O
+Alpha-1B adrenergic receptor,ADRA1B,P35368,CHEMBL232,Family A G protein-coupled receptor,0.5121255546721497,5 / 13,C1=CC(=C(C=C1CCN)O)O
+DNA repair protein RAD52 homolog,RAD52,P43351,CHEMBL2362978,Other nuclear protein,0.4880453639109189,8 / 3,C1=CC(=C(C=C1CCN)O)O
+Protein argonaute-2,AGO2,Q9UKV8,CHEMBL4680043,Hydrolase,0.4831418901254268,1 / 2,C1=CC(=C(C=C1CCN)O)O
+Glyceraldehyde-3-phosphate dehydrogenase,GAPDH,P04406,CHEMBL2284,Oxidoreductase,0.4831418901254268,1 / 1,C1=CC(=C(C=C1CCN)O)O
+Tyrosine-protein kinase Fyn,FYN,P06241,CHEMBL1841,Kinase,0.3170042659242647,8 / 8,C1=CC(=C(C=C1CCN)O)O
+Delta-type opioid receptor,OPRD1,P41143,CHEMBL236,Family A G protein-coupled receptor,0.3103081209803796,13 / 331,C1=CC(=C(C=C1CCN)O)O
+Carbonic anhydrase 2,CA2,P00918,CHEMBL205,Lyase,0.3035638423255099,111 / 107,C1=CC(=C(C=C1CCN)O)O
+Tyrosine-protein kinase Lck,LCK,P06239,CHEMBL258,Kinase,0.2840182503146532,22 / 9,C1=CC(=C(C=C1CCN)O)O
+Beta-3 adrenergic receptor,ADRB3,P13945,CHEMBL246,Family A G protein-coupled receptor,0.2773329967676181,5 / 27,C1=CC(=C(C=C1CCN)O)O
+Macrophage migration inhibitory factor,MIF,P14174,CHEMBL2085,Enzyme,0.2764738732023933,10 / 13,C1=CC(=C(C=C1CCN)O)O
+Kappa-type opioid receptor,OPRK1,P41145,CHEMBL237,Family A G protein-coupled receptor,0.2641657342149552,9 / 346,C1=CC(=C(C=C1CCN)O)O
+Mu-type opioid receptor,OPRM1,P35372,CHEMBL233,Family A G protein-coupled receptor,0.2641657342149552,11 / 386,C1=CC(=C(C=C1CCN)O)O
+Carbonic anhydrase 4,CA4,P22748,CHEMBL3729,Lyase,0.260877939551495,28 / 20,C1=CC(=C(C=C1CCN)O)O
+Transient receptor potential cation channel subfamily A member 1,TRPA1,O75762,CHEMBL6007,Voltage-gated ion channel,0.2519012160776508,3 / 17,C1=CC(=C(C=C1CCN)O)O
+5-hydroxytryptamine receptor 7,HTR7,P34969,CHEMBL3155,Family A G protein-coupled receptor,0.2406828235042646,4 / 53,C1=CC(=C(C=C1CCN)O)O
+Beta-secretase 1,BACE1,P56817,CHEMBL4822,Protease,0.2389304820573969,41 / 9,C1=CC(=C(C=C1CCN)O)O
+Carbonic anhydrase 9,CA9,Q16790,CHEMBL3594,Lyase,0.2346794236435367,110 / 58,C1=CC(=C(C=C1CCN)O)O
+Carbonic anhydrase 1,CA1,P00915,CHEMBL261,Lyase,0.2346794236435367,89 / 84,C1=CC(=C(C=C1CCN)O)O
+Carbonic anhydrase 12,CA12,O43570,CHEMBL3242,Lyase,0.2346794236435367,113 / 50,C1=CC(=C(C=C1CCN)O)O
+Carbonic anhydrase 7,CA7,P43166,CHEMBL2326,Lyase,0.2234153583524755,57 / 25,C1=CC(=C(C=C1CCN)O)O
+Sigma intracellular receptor 2,TMEM97,Q5BJF2,CHEMBL4105907,Membrane receptor,0.2222032593708109,2 / 39,C1=CC(=C(C=C1CCN)O)O
+Polyunsaturated fatty acid 5-lipoxygenase,ALOX5,P09917,CHEMBL215,Oxidoreductase,0.2202465731166995,79 / 107,C1=CC(=C(C=C1CCN)O)O
+5-hydroxytryptamine receptor 3A,HTR3A,P46098,CHEMBL1899,Ligand-gated ion channel,0.2110250153991417,1 / 3,C1=CC(=C(C=C1CCN)O)O
+Lysine-specific histone demethylase 1A,KDM1A,O60341,CHEMBL6136,Eraser,0.2069547535038173,48 / 301,C1=CC(=C(C=C1CCN)O)O
+Insulin-like growth factor 1 receptor,IGF1R,P08069,CHEMBL1957,Kinase,0.2038534712395282,27 / 23,C1=CC(=C(C=C1CCN)O)O
+5-hydroxytryptamine receptor 1A,HTR1A,P08908,CHEMBL214,Family A G protein-coupled receptor,0.2003090643516839,8 / 195,C1=CC(=C(C=C1CCN)O)O
+Polyunsaturated fatty acid lipoxygenase ALOX12,ALOX12,P18054,CHEMBL3687,Enzyme,0.1991161963034083,24 / 11,C1=CC(=C(C=C1CCN)O)O
+"Carbonic anhydrase 5B, mitochondrial",CA5B,Q9Y2D0,CHEMBL3969,Lyase,0.1989132202047813,12 / 10,C1=CC(=C(C=C1CCN)O)O
+"Carbonic anhydrase 5A, mitochondrial",CA5A,P35218,CHEMBL4789,Lyase,0.1989132202047813,16 / 12,C1=CC(=C(C=C1CCN)O)O
+Carbonic anhydrase 6,CA6,P23280,CHEMBL3025,Lyase,0.1989132202047813,13 / 16,C1=CC(=C(C=C1CCN)O)O
+Carbonic anhydrase 3,CA3,P07451,CHEMBL2885,Lyase,0.1989132202047813,8 / 6,C1=CC(=C(C=C1CCN)O)O
+Prostaglandin G/H synthase 1,PTGS1,P23219,CHEMBL221,Oxidoreductase,0.1969353458838609,17 / 30,C1=CC(=C(C=C1CCN)O)O
+5-hydroxytryptamine receptor 2A,HTR2A,P28223,CHEMBL224,Family A G protein-coupled receptor,0.188616612609011,8 / 232,C1=CC(=C(C=C1CCN)O)O
+Carbonic anhydrase 13,CA13,Q8N1Q1,CHEMBL3912,Lyase,0.1822663560220556,7 / 3,C1=CC(=C(C=C1CCN)O)O
+Aromatase,CYP19A1,P11511,CHEMBL1978,Cytochrome P450,0.177387688883402,40 / 100,C1=CC(=C(C=C1CCN)O)O
+Transthyretin,TTR,P02766,CHEMBL3194,Secreted protein,0.177387688883402,29 / 16,C1=CC(=C(C=C1CCN)O)O
+Amine oxidase [copper-containing] 3,AOC3,Q16853,CHEMBL3437,Oxidoreductase,0.1744484621609938,1 / 50,C1=CC(=C(C=C1CCN)O)O
+Estrogen receptor beta,ESR2,Q92731,CHEMBL242,Nuclear receptor,0.1728645087749836,256 / 232,C1=CC(=C(C=C1CCN)O)O
+Estrogen receptor,ESR1,P03372,CHEMBL206,Nuclear receptor,0.1728645087749836,218 / 249,C1=CC(=C(C=C1CCN)O)O
+Dihydropteridine reductase,QDPR,P09417,CHEMBL3730,Oxidoreductase,0.1726167464858733,7 / 8,C1=CC(=C(C=C1CCN)O)O
+17-beta-hydroxysteroid dehydrogenase type 2,HSD17B2,P37059,CHEMBL2789,Oxidoreductase,0.1717310897158341,38 / 35,C1=CC(=C(C=C1CCN)O)O
+17-beta-hydroxysteroid dehydrogenase type 1,HSD17B1,P14061,CHEMBL3181,Oxidoreductase,0.1717310897158341,39 / 62,C1=CC(=C(C=C1CCN)O)O
+Prostaglandin G/H synthase 2,PTGS2,P35354,CHEMBL230,Oxidoreductase,0.1679333061894722,48 / 38,C1=CC(=C(C=C1CCN)O)O
+Bcl-2-like protein 1,BCL2L1,Q07817,CHEMBL4625,Other ion channel,0.1647168656714669,26 / 13,C1=CC(=C(C=C1CCN)O)O
+Poly [ADP-ribose] polymerase 1,PARP1,P09874,CHEMBL3105,Transferase,0.1604754958402962,83 / 5,C1=CC(=C(C=C1CCN)O)O
+Sigma non-opioid intracellular receptor 1,SIGMAR1,Q99720,CHEMBL287,Membrane receptor,0.1600158230883175,9 / 379,C1=CC(=C(C=C1CCN)O)O
+Sodium-dependent serotonin transporter,SLC6A4,P31645,CHEMBL228,Electrochemical transporter,0.1600158230883175,4 / 431,C1=CC(=C(C=C1CCN)O)O
+Solute carrier family 22 member 1,SLC22A1,O15245,CHEMBL5685,Electrochemical transporter,0.1600158230883175,1 / 5,C1=CC(=C(C=C1CCN)O)O
+Polyunsaturated fatty acid lipoxygenase ALOX15,ALOX15,P16050,CHEMBL2903,Oxidoreductase,0.159527940884838,46 / 33,C1=CC(=C(C=C1CCN)O)O
+Apoptosis regulator Bcl-2,BCL2,P10415,CHEMBL4860,Other ion channel,0.1580753650038594,46 / 18,C1=CC(=C(C=C1CCN)O)O
+Receptor tyrosine-protein kinase erbB-2,ERBB2,P04626,CHEMBL1824,Kinase,0.1538726711659631,17 / 6,C1=CC(=C(C=C1CCN)O)O
+Microtubule-associated protein tau,MAPT,P10636,CHEMBL1293224,Other cytosolic protein,0.1485230327583087,5 / 2,C1=CC(=C(C=C1CCN)O)O
+Amine oxidase [flavin-containing] B,MAOB,P27338,CHEMBL2039,Oxidoreductase,0.1433537371119941,52 / 219,C1=CC(=C(C=C1CCN)O)O
+Tyrosinase,TYR,P14679,CHEMBL1973,Oxidoreductase,0.1430317919928209,66 / 17,C1=CC(=C(C=C1CCN)O)O
+Carbonic anhydrase 14,CA14,Q9ULX7,CHEMBL3510,Lyase,0.1418771512444213,44 / 26,C1=CC(=C(C=C1CCN)O)O
+Muscarinic acetylcholine receptor M3,CHRM3,P20309,CHEMBL245,Family A G protein-coupled receptor,0.1386136522356963,0 / 38,C1=CC(=C(C=C1CCN)O)O
+Muscarinic acetylcholine receptor M1,CHRM1,P11229,CHEMBL216,Family A G protein-coupled receptor,0.1386136522356963,0 / 35,C1=CC(=C(C=C1CCN)O)O
+Muscarinic acetylcholine receptor M2,CHRM2,P08172,CHEMBL211,Family A G protein-coupled receptor,0.1386136522356963,0 / 36,C1=CC(=C(C=C1CCN)O)O
+Adenylate cyclase type 5,ADCY5,O95622,CHEMBL3189,Lyase,0.1369792892271536,2 / 2,C1=CC(=C(C=C1CCN)O)O
+Coagulation factor XIII A chain,F13A1,P00488,CHEMBL4530,Aminoacyltransferase,0.1333358326640743,1 / 1,C1=CC(=C(C=C1CCN)O)O
+Acetylcholinesterase,ACHE,P22303,CHEMBL220,Hydrolase,0.1294795071310256,31 / 121,C1=CC(=C(C=C1CCN)O)O
+Tyrosine 3-monooxygenase,TH,P07101,CHEMBL1969,Oxidoreductase,0.1255971701401348,3 / 1,C1=CC(=C(C=C1CCN)O)O
+Induced myeloid leukemia cell differentiation protein Mcl-1,MCL1,Q07820,CHEMBL4361,Other cytosolic protein,0.1209086106783883,73 / 18,C1=CC(=C(C=C1CCN)O)O
+DNA repair nuclease/redox regulator APEX1,APEX1,P27695,CHEMBL5619,Enzyme,0.1196141412707029,7 / 1,C1=CC(=C(C=C1CCN)O)O
+High mobility group protein B1,HMGB1,P09429,CHEMBL2311236,Unclassified protein,0.116292025672979,1 / 2,C1=CC(=C(C=C1CCN)O)O
+Histone deacetylase 6,HDAC6,Q9UBN7,CHEMBL1865,Eraser,0.1137564591273657,33 / 18,C1=CC(=C(C=C1CCN)O)O
+5-hydroxytryptamine receptor 2C,HTR2C,P28335,CHEMBL225,Family A G protein-coupled receptor,0.1132745133174796,10 / 150,C1=CC(=C(C=C1CCN)O)O
+Dual specificity tyrosine-phosphorylation-regulated kinase 1A,DYRK1A,Q13627,CHEMBL2292,Kinase,0.1123562138764712,39 / 7,C1=CC(=C(C=C1CCN)O)O
+Neuromedin-U receptor 2,NMUR2,Q9GZQ4,CHEMBL1075144,Family A G protein-coupled receptor,0.1101561922143341,2 / 1,C1=CC(=C(C=C1CCN)O)O
+Androgen receptor,AR,P10275,CHEMBL1871,Nuclear receptor,0.1100165295495985,11 / 21,C1=CC(=C(C=C1CCN)O)O
+Amine oxidase [flavin-containing] A,MAOA,P21397,CHEMBL1951,Oxidoreductase,0.1090206900927129,58 / 125,C1=CC(=C(C=C1CCN)O)O
+Steroid hormone receptor ERR2,ESRRB,O95718,CHEMBL3751,Nuclear receptor,0.1078068178427921,1 / 14,C1=CC(=C(C=C1CCN)O)O
+HSP60/HSP10,,P10809&P61604,CHEMBL4106131,Unclassified protein,0.1059032437622834,4 / 3,C1=CC(=C(C=C1CCN)O)O
+Ribosyldihydronicotinamide dehydrogenase [quinone],NQO2,P16083,CHEMBL3959,Oxidoreductase,0.1046748434074839,7 / 50,C1=CC(=C(C=C1CCN)O)O
+5-hydroxytryptamine receptor 6,HTR6,P50406,CHEMBL3371,Family A G protein-coupled receptor,0.1021096011836789,1 / 30,C1=CC(=C(C=C1CCN)O)O
+Dual specificity protein kinase CLK1,CLK1,P49759,CHEMBL4224,Kinase,0.1011348441156259,14 / 1,C1=CC(=C(C=C1CCN)O)O
+5-hydroxytryptamine receptor 2B,HTR2B,P41595,CHEMBL1833,Family A G protein-coupled receptor,0.0979978256495712,7 / 101,C1=CC(=C(C=C1CCN)O)O
+Myeloperoxidase,MPO,P05164,CHEMBL2439,Oxidoreductase,0.0972571137153971,9 / 19,C1=CC(=C(C=C1CCN)O)O
+GABA-A receptor; alpha-1/beta-2/gamma-2,,P14867&P47870&P18507,CHEMBL2095172,Ligand-gated ion channel,0.0951750766033629,1 / 4,C1=CC(=C(C=C1CCN)O)O
+Leukotriene B4 receptor 1,LTB4R,Q15722,CHEMBL3911,Family A G protein-coupled receptor,0.0940312299445118,1 / 3,C1=CC(=C(C=C1CCN)O)O
+Transcription factor AP1,,P05412&P01100,CHEMBL2111421,Transcription factor,0.0940312299445118,1 / 2,C1=CC(=C(C=C1CCN)O)O
+D(3) dopamine receptor,DRD3,P35462,CHEMBL234,Family A G protein-coupled receptor,0.6142073556025491,319 / 199,C1=CC(=C(C=C1CCN)O)N
+D(1A) dopamine receptor,DRD1,P21728,CHEMBL2056,Family A G protein-coupled receptor,0.6142073556025491,346 / 169,C1=CC(=C(C=C1CCN)O)N
+D(2) dopamine receptor,DRD2,P14416,CHEMBL217,Family A G protein-coupled receptor,0.5437589844561149,483 / 289,C1=CC(=C(C=C1CCN)O)N
+D(1B) dopamine receptor,DRD5,P21918,CHEMBL1850,Family A G protein-coupled receptor,0.5254457684622468,93 / 74,C1=CC(=C(C=C1CCN)O)N
+D(4) dopamine receptor,DRD4,P21917,CHEMBL219,Family A G protein-coupled receptor,0.5254457684622468,154 / 92,C1=CC(=C(C=C1CCN)O)N
+Sodium-dependent dopamine transporter,SLC6A3,Q01959,CHEMBL238,Electrochemical transporter,0.5131957369657167,42 / 236,C1=CC(=C(C=C1CCN)O)N
+Sodium-dependent noradrenaline transporter,SLC6A2,P23975,CHEMBL222,Electrochemical transporter,0.5131957369657167,54 / 206,C1=CC(=C(C=C1CCN)O)N
+Delta-type opioid receptor,OPRD1,P41143,CHEMBL236,Family A G protein-coupled receptor,0.4923317134379821,822 / 266,C1=CC(=C(C=C1CCN)O)N
+Alpha-synuclein,SNCA,P37840,CHEMBL6152,Unclassified protein,0.4435079212191659,76 / 11,C1=CC(=C(C=C1CCN)O)N
+5-hydroxytryptamine receptor 3A,HTR3A,P46098,CHEMBL1899,Ligand-gated ion channel,0.4196103951847856,15 / 5,C1=CC(=C(C=C1CCN)O)N
+Alpha-1A adrenergic receptor,ADRA1A,P35348,CHEMBL229,Family A G protein-coupled receptor,0.4174191623922422,34 / 43,C1=CC(=C(C=C1CCN)O)N
+Alpha-2A adrenergic receptor,ADRA2A,P08913,CHEMBL1867,Family A G protein-coupled receptor,0.4174191623922422,51 / 37,C1=CC(=C(C=C1CCN)O)N
+5-hydroxytryptamine receptor 7,HTR7,P34969,CHEMBL3155,Family A G protein-coupled receptor,0.4052291282140502,102 / 80,C1=CC(=C(C=C1CCN)O)N
+Kappa-type opioid receptor,OPRK1,P41145,CHEMBL237,Family A G protein-coupled receptor,0.4027939586866924,652 / 282,C1=CC(=C(C=C1CCN)O)N
+Alpha-1B adrenergic receptor,ADRA1B,P35368,CHEMBL232,Family A G protein-coupled receptor,0.3981524718877761,23 / 17,C1=CC(=C(C=C1CCN)O)N
+Beta-2 adrenergic receptor,ADRB2,P07550,CHEMBL210,Family A G protein-coupled receptor,0.3802751401797665,208 / 126,C1=CC(=C(C=C1CCN)O)N
+Beta-1 adrenergic receptor,ADRB1,P08588,CHEMBL213,Family A G protein-coupled receptor,0.3797946673830498,124 / 33,C1=CC(=C(C=C1CCN)O)N
+Mu-type opioid receptor,OPRM1,P35372,CHEMBL233,Family A G protein-coupled receptor,0.362252124854321,747 / 298,C1=CC(=C(C=C1CCN)O)N
+5-hydroxytryptamine receptor 1A,HTR1A,P08908,CHEMBL214,Family A G protein-coupled receptor,0.3513698522448737,192 / 213,C1=CC(=C(C=C1CCN)O)N
+Lysine-specific demethylase 4E,KDM4E,B2RXH2,CHEMBL1293226,Eraser,0.3410081104888466,10 / 5,C1=CC(=C(C=C1CCN)O)N
+Alpha-2C adrenergic receptor,ADRA2C,P18825,CHEMBL1916,Family A G protein-coupled receptor,0.3391480734415003,27 / 28,C1=CC(=C(C=C1CCN)O)N
+Alpha-2B adrenergic receptor,ADRA2B,P18089,CHEMBL1942,Family A G protein-coupled receptor,0.3391480734415003,22 / 21,C1=CC(=C(C=C1CCN)O)N
+5-hydroxytryptamine receptor 2A,HTR2A,P28223,CHEMBL224,Family A G protein-coupled receptor,0.3378853467045333,156 / 238,C1=CC(=C(C=C1CCN)O)N
+5-hydroxytryptamine receptor 2C,HTR2C,P28335,CHEMBL225,Family A G protein-coupled receptor,0.3323186610859943,71 / 153,C1=CC(=C(C=C1CCN)O)N
+Macrophage migration inhibitory factor,MIF,P14174,CHEMBL2085,Enzyme,0.3008272168089521,108 / 10,C1=CC(=C(C=C1CCN)O)N
+Sigma intracellular receptor 2,TMEM97,Q5BJF2,CHEMBL4105907,Membrane receptor,0.2926606027170458,44 / 17,C1=CC(=C(C=C1CCN)O)N
+5-hydroxytryptamine receptor 2B,HTR2B,P41595,CHEMBL1833,Family A G protein-coupled receptor,0.2816416263748693,79 / 102,C1=CC(=C(C=C1CCN)O)N
+Alpha-1D adrenergic receptor,ADRA1D,P25100,CHEMBL223,Family A G protein-coupled receptor,0.2707158357015097,33 / 29,C1=CC(=C(C=C1CCN)O)N
+MAP/microtubule affinity-regulating kinase 4,MARK4,Q96L34,CHEMBL5754,Kinase,0.2679517771916307,8 / 1,C1=CC(=C(C=C1CCN)O)N
+5-hydroxytryptamine receptor 4,HTR4,Q13639,CHEMBL1875,Family A G protein-coupled receptor,0.2679517771916307,10 / 8,C1=CC(=C(C=C1CCN)O)N
+Synaptic vesicular amine transporter,SLC18A2,Q05940,CHEMBL1893,Electrochemical transporter,0.2679517771916307,2 / 2,C1=CC(=C(C=C1CCN)O)N
+5-hydroxytryptamine receptor 6,HTR6,P50406,CHEMBL3371,Family A G protein-coupled receptor,0.2679517771916307,75 / 65,C1=CC(=C(C=C1CCN)O)N
+5-hydroxytryptamine receptor 5A,HTR5A,P47898,CHEMBL3426,Family A G protein-coupled receptor,0.2679517771916307,9 / 20,C1=CC(=C(C=C1CCN)O)N
+5-hydroxytryptamine receptor 1E,HTR1E,P28566,CHEMBL2182,Family A G protein-coupled receptor,0.2679517771916307,6 / 15,C1=CC(=C(C=C1CCN)O)N
+5-hydroxytryptamine receptor 1B,HTR1B,P28222,CHEMBL1898,Family A G protein-coupled receptor,0.2679517771916307,19 / 79,C1=CC(=C(C=C1CCN)O)N
+5-hydroxytryptamine receptor 1D,HTR1D,P28221,CHEMBL1983,Family A G protein-coupled receptor,0.2679517771916307,24 / 95,C1=CC(=C(C=C1CCN)O)N
+Sigma non-opioid intracellular receptor 1,SIGMAR1,Q99720,CHEMBL287,Membrane receptor,0.2523176785749062,128 / 287,C1=CC(=C(C=C1CCN)O)N
+Melatonin receptor type 1B,MTNR1B,P49286,CHEMBL1946,Family A G protein-coupled receptor,0.2505689391000885,7 / 157,C1=CC(=C(C=C1CCN)O)N
+Melatonin receptor type 1A,MTNR1A,P48039,CHEMBL1945,Family A G protein-coupled receptor,0.2505689391000885,8 / 204,C1=CC(=C(C=C1CCN)O)N
+Neuromedin-U receptor 2,NMUR2,Q9GZQ4,CHEMBL1075144,Family A G protein-coupled receptor,0.2437610638705294,2 / 1,C1=CC(=C(C=C1CCN)O)N
+Neuronal acetylcholine receptor; alpha3/beta4,,P30926&P32297,CHEMBL1907594,Ligand-gated ion channel,0.2374788734324957,33 / 8,C1=CC(=C(C=C1CCN)O)N
+Beta-3 adrenergic receptor,ADRB3,P13945,CHEMBL246,Family A G protein-coupled receptor,0.2317748993975834,100 / 18,C1=CC(=C(C=C1CCN)O)N
+Carbonic anhydrase 2,CA2,P00918,CHEMBL205,Lyase,0.2291749043504849,479 / 77,C1=CC(=C(C=C1CCN)O)N
+Prostaglandin G/H synthase 1,PTGS1,P23219,CHEMBL221,Oxidoreductase,0.2264823198195586,67 / 25,C1=CC(=C(C=C1CCN)O)N
+Estrogen receptor,ESR1,P03372,CHEMBL206,Nuclear receptor,0.2225310594978344,1182 / 180,C1=CC(=C(C=C1CCN)O)N
+Carbonic anhydrase 9,CA9,Q16790,CHEMBL3594,Lyase,0.2212655046608803,408 / 43,C1=CC(=C(C=C1CCN)O)N
+Carbonic anhydrase 1,CA1,P00915,CHEMBL261,Lyase,0.2212655046608803,407 / 59,C1=CC(=C(C=C1CCN)O)N
+Aromatase,CYP19A1,P11511,CHEMBL1978,Cytochrome P450,0.2206236886374551,141 / 154,C1=CC(=C(C=C1CCN)O)N
+Tyrosinase,TYR,P14679,CHEMBL1973,Oxidoreductase,0.2188605135738406,121 / 14,C1=CC(=C(C=C1CCN)O)N
+Lysine-specific histone demethylase 1A,KDM1A,O60341,CHEMBL6136,Eraser,0.205857551514315,187 / 212,C1=CC(=C(C=C1CCN)O)N
+Sodium-dependent serotonin transporter,SLC6A4,P31645,CHEMBL228,Electrochemical transporter,0.1892930506354549,83 / 292,C1=CC(=C(C=C1CCN)O)N
+Carbonic anhydrase 12,CA12,O43570,CHEMBL3242,Lyase,0.1870440067995751,348 / 40,C1=CC(=C(C=C1CCN)O)N
+Muscarinic acetylcholine receptor M1,CHRM1,P11229,CHEMBL216,Family A G protein-coupled receptor,0.1800357035309551,9 / 22,C1=CC(=C(C=C1CCN)O)N
+Muscarinic acetylcholine receptor M2,CHRM2,P08172,CHEMBL211,Family A G protein-coupled receptor,0.1800357035309551,3 / 25,C1=CC(=C(C=C1CCN)O)N
+Estrogen receptor beta,ESR2,Q92731,CHEMBL242,Nuclear receptor,0.1762553870323517,966 / 198,C1=CC(=C(C=C1CCN)O)N
+Prostaglandin G/H synthase 2,PTGS2,P35354,CHEMBL230,Oxidoreductase,0.1708685802891303,165 / 33,C1=CC(=C(C=C1CCN)O)N
+Sepiapterin reductase,SPR,P35270,CHEMBL3988583,Oxidoreductase,0.1563248899565079,63 / 9,C1=CC(=C(C=C1CCN)O)N
+"Carbonic anhydrase 5A, mitochondrial",CA5A,P35218,CHEMBL4789,Lyase,0.155720781946151,35 / 8,C1=CC(=C(C=C1CCN)O)N
+Nitric oxide synthase 1,NOS1,P29475,CHEMBL3568,Oxidoreductase,0.1528093912737899,2 / 29,C1=CC(=C(C=C1CCN)O)N
+Amine oxidase [flavin-containing] B,MAOB,P27338,CHEMBL2039,Oxidoreductase,0.1526751912444873,416 / 155,C1=CC(=C(C=C1CCN)O)N
+Adenylate cyclase type 5,ADCY5,O95622,CHEMBL3189,Lyase,0.1526247640423207,2 / 2,C1=CC(=C(C=C1CCN)O)N
+DNA repair protein RAD52 homolog,RAD52,P43351,CHEMBL2362978,Other nuclear protein,0.152516242725432,3 / 2,C1=CC(=C(C=C1CCN)O)N
+Epidermal growth factor receptor,EGFR,P00533,CHEMBL203,Kinase,0.1522188557157271,378 / 10,C1=CC(=C(C=C1CCN)O)N
+Carbonic anhydrase 4,CA4,P22748,CHEMBL3729,Lyase,0.1520699528282121,66 / 13,C1=CC(=C(C=C1CCN)O)N
+Myeloperoxidase,MPO,P05164,CHEMBL2439,Oxidoreductase,0.1517095834572946,34 / 35,C1=CC(=C(C=C1CCN)O)N
+Neuronal acetylcholine receptor; alpha4/beta2,,P17787&P43681,CHEMBL1907589,Ligand-gated ion channel,0.1512060053566029,26 / 12,C1=CC(=C(C=C1CCN)O)N
+Tyrosine-protein kinase Lck,LCK,P06239,CHEMBL258,Kinase,0.1490792278437964,91 / 4,C1=CC(=C(C=C1CCN)O)N
+Adenosine receptor A2b,ADORA2B,P29275,CHEMBL255,Family A G protein-coupled receptor,0.1471574422621686,38 / 2,C1=CC(=C(C=C1CCN)O)N
+Dual specificity protein kinase CLK1,CLK1,P49759,CHEMBL4224,Kinase,0.1466097052989219,46 / 7,C1=CC(=C(C=C1CCN)O)N
+Carbonic anhydrase 7,CA7,P43166,CHEMBL2326,Lyase,0.1463165161013615,98 / 13,C1=CC(=C(C=C1CCN)O)N
+Beta-secretase 1,BACE1,P56817,CHEMBL4822,Protease,0.1455984162942808,166 / 5,C1=CC(=C(C=C1CCN)O)N
+Heat shock protein HSP 90-alpha,HSP90AA1,P07900,CHEMBL3880,Other cytosolic protein,0.1452371051503121,507 / 2,C1=CC(=C(C=C1CCN)O)N
+Acetylcholinesterase,ACHE,P22303,CHEMBL220,Hydrolase,0.1451631590722871,192 / 105,C1=CC(=C(C=C1CCN)O)N
+Protein argonaute-2,AGO2,Q9UKV8,CHEMBL4680043,Hydrolase,0.1438460229608627,1 / 2,C1=CC(=C(C=C1CCN)O)N
+Muscarinic acetylcholine receptor M3,CHRM3,P20309,CHEMBL245,Family A G protein-coupled receptor,0.143561017432825,13 / 23,C1=CC(=C(C=C1CCN)O)N
+"Indoleamine 2,3-dioxygenase 1",IDO1,P14902,CHEMBL4685,Oxidoreductase,0.1410726664601938,171 / 16,C1=CC(=C(C=C1CCN)O)N
+Polyunsaturated fatty acid lipoxygenase ALOX15,ALOX15,P16050,CHEMBL2903,Oxidoreductase,0.1382443471736411,90 / 27,C1=CC(=C(C=C1CCN)O)N
+Glyceraldehyde-3-phosphate dehydrogenase,GAPDH,P04406,CHEMBL2284,Oxidoreductase,0.137907111437322,2 / 1,C1=CC(=C(C=C1CCN)O)N
+Tyrosine-protein kinase Fyn,FYN,P06241,CHEMBL1841,Kinase,0.1370521349473316,111 / 5,C1=CC(=C(C=C1CCN)O)N
+Thromboxane A2 receptor,TBXA2R,P21731,CHEMBL2069,Family A G protein-coupled receptor,0.1356267171122393,16 / 8,C1=CC(=C(C=C1CCN)O)N
+Aminopeptidase N,ANPEP,P15144,CHEMBL1907,Protease,0.1327667489560174,39 / 5,C1=CC(=C(C=C1CCN)O)N
+Dual specificity tyrosine-phosphorylation-regulated kinase 1A,DYRK1A,Q13627,CHEMBL2292,Kinase,0.131914904606471,113 / 9,C1=CC(=C(C=C1CCN)O)N
+"Carbonic anhydrase 5B, mitochondrial",CA5B,Q9Y2D0,CHEMBL3969,Lyase,0.1305285906273389,23 / 5,C1=CC(=C(C=C1CCN)O)N
+Carbonic anhydrase 13,CA13,Q8N1Q1,CHEMBL3912,Lyase,0.1305285906273389,21 / 3,C1=CC(=C(C=C1CCN)O)N
+Carbonic anhydrase 6,CA6,P23280,CHEMBL3025,Lyase,0.1305285906273389,32 / 8,C1=CC(=C(C=C1CCN)O)N
+Carbonic anhydrase 3,CA3,P07451,CHEMBL2885,Lyase,0.1305285906273389,13 / 5,C1=CC(=C(C=C1CCN)O)N
+Solute carrier family 22 member 1,SLC22A1,O15245,CHEMBL5685,Electrochemical transporter,0.1305285906273389,6 / 6,C1=CC(=C(C=C1CCN)O)N
+Dual specificity tyrosine-phosphorylation-regulated kinase 1B,DYRK1B,Q9Y463,CHEMBL5543,Kinase,0.1285793914138287,65 / 5,C1=CC(=C(C=C1CCN)O)N
+Transient receptor potential cation channel subfamily A member 1,TRPA1,O75762,CHEMBL6007,Voltage-gated ion channel,0.1278335270880468,4 / 6,C1=CC(=C(C=C1CCN)O)N
+Amine oxidase [flavin-containing] A,MAOA,P21397,CHEMBL1951,Oxidoreductase,0.1264982952187506,246 / 125,C1=CC(=C(C=C1CCN)O)N
+Androgen receptor,AR,P10275,CHEMBL1871,Nuclear receptor,0.1247875002171196,218 / 11,C1=CC(=C(C=C1CCN)O)N
+Voltage-gated inwardly rectifying potassium channel KCNH2,KCNH2,Q12809,CHEMBL240,Voltage-gated ion channel,0.1242732173081886,79 / 93,C1=CC(=C(C=C1CCN)O)N
+Polyunsaturated fatty acid 5-lipoxygenase,ALOX5,P09917,CHEMBL215,Oxidoreductase,0.1226725743557615,366 / 50,C1=CC(=C(C=C1CCN)O)N
+Insulin-like growth factor 1 receptor,IGF1R,P08069,CHEMBL1957,Kinase,0.1226725743557615,47 / 22,C1=CC(=C(C=C1CCN)O)N
+Histone deacetylase 6,HDAC6,Q9UBN7,CHEMBL1865,Eraser,0.1215055545425456,140 / 16,C1=CC(=C(C=C1CCN)O)N
+Adenosine receptor A2a,ADORA2A,P29274,CHEMBL251,Family A G protein-coupled receptor,0.1184324510443136,115 / 4,C1=CC(=C(C=C1CCN)O)N
+Coagulation factor XIII A chain,F13A1,P00488,CHEMBL4530,Aminoacyltransferase,0.1169163734926831,2 / 1,C1=CC(=C(C=C1CCN)O)N
+Transient receptor potential cation channel subfamily V member 1,TRPV1,Q8NER1,CHEMBL4794,Voltage-gated ion channel,0.1150414639478341,45 / 27,C1=CC(=C(C=C1CCN)O)N
+Lysyl oxidase homolog 2,LOXL2,Q9Y4K0,CHEMBL3714029,Oxidoreductase,0.1145818667100692,5 / 3,C1=CC(=C(C=C1CCN)O)N
+Cholinesterase,BCHE,P06276,CHEMBL1914,Hydrolase,0.1144690569116357,98 / 70,C1=CC(=C(C=C1CCN)O)N
+Poly [ADP-ribose] polymerase 1,PARP1,P09874,CHEMBL3105,Transferase,0.7361179356149286,1030 / 97,CNC(=O)C1=CC=CC=C1
+Alcohol dehydrogenase 1C,ADH1C,P00326,CHEMBL3285,Oxidoreductase,0.6417919148568839,6 / 1,CNC(=O)C1=CC=CC=C1
+All-trans-retinol dehydrogenase [NAD(+)] ADH1B,ADH1B,P00325,CHEMBL3284,Oxidoreductase,0.6417919148568839,9 / 1,CNC(=O)C1=CC=CC=C1
+Carbonic anhydrase 9,CA9,Q16790,CHEMBL3594,Lyase,0.600245664695698,2139 / 121,CNC(=O)C1=CC=CC=C1
+Carbonic anhydrase 12,CA12,O43570,CHEMBL3242,Lyase,0.600245664695698,1734 / 99,CNC(=O)C1=CC=CC=C1
+Ribosyldihydronicotinamide dehydrogenase [quinone],NQO2,P16083,CHEMBL3959,Oxidoreductase,0.5646296475326795,131 / 7,CNC(=O)C1=CC=CC=C1
+Melatonin receptor type 1A,MTNR1A,P48039,CHEMBL1945,Family A G protein-coupled receptor,0.5289746864042826,778 / 7,CNC(=O)C1=CC=CC=C1
+Urokinase-type plasminogen activator,PLAU,P00749,CHEMBL3286,Protease,0.5101206977311926,38 / 61,CNC(=O)C1=CC=CC=C1
+Bifunctional epoxide hydrolase 2,EPHX2,P34913,CHEMBL2409,Protease,0.4586438567175516,674 / 167,CNC(=O)C1=CC=CC=C1
+Cathepsin K,CTSK,P43235,CHEMBL268,Protease,0.4544478240224838,797 / 19,CNC(=O)C1=CC=CC=C1
+Palmitoleoyl-protein carboxylesterase NOTUM,NOTUM,Q6P988,CHEMBL3714531,Hydrolase,0.4517217335813791,205 / 2,CNC(=O)C1=CC=CC=C1
+Serine/threonine-protein kinase PLK1,PLK1,P53350,CHEMBL3024,Kinase,0.4430056341187843,251 / 3,CNC(=O)C1=CC=CC=C1
+Acetylcholinesterase,ACHE,P22303,CHEMBL220,Hydrolase,0.4230405151085248,1240 / 177,CNC(=O)C1=CC=CC=C1
+Induced myeloid leukemia cell differentiation protein Mcl-1,MCL1,Q07820,CHEMBL4361,Other cytosolic protein,0.4202592117856714,282 / 2,CNC(=O)C1=CC=CC=C1
+Amine oxidase [flavin-containing] B,MAOB,P27338,CHEMBL2039,Oxidoreductase,0.4183310452922555,1316 / 100,CNC(=O)C1=CC=CC=C1
+Epoxide hydrolase 1,EPHX1,P07099,CHEMBL1968,Protease,0.4178239224149001,197 / 33,CNC(=O)C1=CC=CC=C1
+Cytochrome P450 1B1,CYP1B1,Q16678,CHEMBL4878,Cytochrome P450,0.4132728176713958,136 / 26,CNC(=O)C1=CC=CC=C1
+Protein mono-ADP-ribosyltransferase PARP10,PARP10,Q53GL7,CHEMBL2429708,Transferase,0.3989258428785358,70 / 54,CNC(=O)C1=CC=CC=C1
+Histone deacetylase 6,HDAC6,Q9UBN7,CHEMBL1865,Eraser,0.3967134705793173,381 / 138,CNC(=O)C1=CC=CC=C1
+Histamine H3 receptor,HRH3,Q9Y5N1,CHEMBL264,Family A G protein-coupled receptor,0.3908728629557282,457 / 123,CNC(=O)C1=CC=CC=C1
+Cathepsin S,CTSS,P25774,CHEMBL2954,Protease,0.3885610019013977,801 / 21,CNC(=O)C1=CC=CC=C1
+Muscarinic acetylcholine receptor M2,CHRM2,P08172,CHEMBL211,Family A G protein-coupled receptor,0.386295589774687,623 / 62,CNC(=O)C1=CC=CC=C1
+Myeloperoxidase,MPO,P05164,CHEMBL2439,Oxidoreductase,0.3842118357251256,301 / 13,CNC(=O)C1=CC=CC=C1
+Cathepsin B,CTSB,P07858,CHEMBL4072,Protease,0.3744579135349048,399 / 26,CNC(=O)C1=CC=CC=C1
+Procathepsin L,CTSL,P07711,CHEMBL3837,Protease,0.3744579135349048,647 / 25,CNC(=O)C1=CC=CC=C1
+Histone deacetylase 8,HDAC8,Q9BY41,CHEMBL3192,Eraser,0.3714316734820979,287 / 82,CNC(=O)C1=CC=CC=C1
+Tyrosine-protein kinase JAK2,JAK2,O60674,CHEMBL2971,Kinase,0.3598212537758227,3745 / 20,CNC(=O)C1=CC=CC=C1
+Protein mono-ADP-ribosyltransferase PARP11,PARP11,Q9NR21,CHEMBL2380189,Transferase,0.3478571915785384,16 / 9,CNC(=O)C1=CC=CC=C1
+Carbonic anhydrase 2,CA2,P00918,CHEMBL205,Lyase,0.3470193675862548,2927 / 202,CNC(=O)C1=CC=CC=C1
+Non-receptor tyrosine-protein kinase TYK2,TYK2,P29597,CHEMBL3553,Kinase,0.3443048579969402,3170 / 18,CNC(=O)C1=CC=CC=C1
+Amine oxidase [flavin-containing] A,MAOA,P21397,CHEMBL1951,Oxidoreductase,0.3377779230454885,617 / 74,CNC(=O)C1=CC=CC=C1
+Bromodomain-containing protein 4,BRD4,O60885,CHEMBL1163125,Reader,0.3366670260151598,4164 / 8,CNC(=O)C1=CC=CC=C1
+5-hydroxytryptamine receptor 2A,HTR2A,P28223,CHEMBL224,Family A G protein-coupled receptor,0.3347327927721932,1045 / 39,CNC(=O)C1=CC=CC=C1
+Histone deacetylase 1,HDAC1,Q13547,CHEMBL325,Eraser,0.3338408648155253,939 / 281,CNC(=O)C1=CC=CC=C1
+P2X purinoceptor 7,P2RX7,Q99572,CHEMBL4805,Ligand-gated ion channel,0.3329730001964294,1951 / 65,CNC(=O)C1=CC=CC=C1
+Histone deacetylase 2,HDAC2,Q92769,CHEMBL1937,Eraser,0.328365360570847,358 / 108,CNC(=O)C1=CC=CC=C1
+Carbonic anhydrase 1,CA1,P00915,CHEMBL261,Lyase,0.3229239770890393,2408 / 160,CNC(=O)C1=CC=CC=C1
+Epidermal growth factor receptor,EGFR,P00533,CHEMBL203,Kinase,0.3208631710622145,2130 / 26,CNC(=O)C1=CC=CC=C1
+Mu-type opioid receptor,OPRM1,P35372,CHEMBL233,Family A G protein-coupled receptor,0.3178908042950101,977 / 171,CNC(=O)C1=CC=CC=C1
+Histone deacetylase 3,HDAC3,O15379,CHEMBL1829,Eraser,0.3146800728525861,371 / 124,CNC(=O)C1=CC=CC=C1
+Muscarinic acetylcholine receptor M3,CHRM3,P20309,CHEMBL245,Family A G protein-coupled receptor,0.3135410683560984,672 / 25,CNC(=O)C1=CC=CC=C1
+Receptor-interacting serine/threonine-protein kinase 1,RIPK1,Q13546,CHEMBL5464,Kinase,0.3113623174330922,870 / 39,CNC(=O)C1=CC=CC=C1
+Bile acid receptor,NR1H4,Q96RI1,CHEMBL2047,Nuclear receptor,0.3105613958165199,498 / 96,CNC(=O)C1=CC=CC=C1
+NAD-dependent protein deacetylase sirtuin-1,SIRT1,Q96EB6,CHEMBL4506,Eraser,0.3103750713342852,84 / 7,CNC(=O)C1=CC=CC=C1
+Neutrophil elastase,ELANE,P08246,CHEMBL248,Protease,0.3103081500043379,451 / 11,CNC(=O)C1=CC=CC=C1
+"Nitric oxide synthase, inducible",NOS2,P35228,CHEMBL4481,Enzyme,0.3085733692738666,275 / 13,CNC(=O)C1=CC=CC=C1
+T1R1/T1R3,,Q7RTX0&Q7RTX1,CHEMBL3832641,Family C G protein-coupled receptor,0.3059550027022109,172 / 101,CNC(=O)C1=CC=CC=C1
+Sodium-dependent serotonin transporter,SLC6A4,P31645,CHEMBL228,Electrochemical transporter,0.3049241478667607,1432 / 187,CNC(=O)C1=CC=CC=C1
+Histamine H4 receptor,HRH4,Q9H3N8,CHEMBL3759,Family A G protein-coupled receptor,0.3038952454869391,369 / 26,CNC(=O)C1=CC=CC=C1
+Tyrosine-protein kinase JAK3,JAK3,P52333,CHEMBL2148,Kinase,0.2989591792637878,2532 / 2,CNC(=O)C1=CC=CC=C1
+Cystic fibrosis transmembrane conductance regulator,CFTR,P13569,CHEMBL4051,Other ion channel,0.2984831118038344,176 / 4,CNC(=O)C1=CC=CC=C1
+Rho-associated protein kinase 1,ROCK1,Q13464,CHEMBL3231,Kinase,0.2973433056664805,596 / 43,CNC(=O)C1=CC=CC=C1
+Rho-associated protein kinase 2,ROCK2,O75116,CHEMBL2973,Kinase,0.2973433056664805,1058 / 81,CNC(=O)C1=CC=CC=C1
+Calpain-1 catalytic subunit,CAPN1,P07384,CHEMBL3891,Protease,0.2971623363059884,273 / 12,CNC(=O)C1=CC=CC=C1
+Aldo-keto reductase family 1 member B1,AKR1B1,P15121,CHEMBL1900,Oxidoreductase,0.2929694463148965,75 / 1,CNC(=O)C1=CC=CC=C1
+Sodium/hydrogen exchanger 1,SLC9A1,P19634,CHEMBL2781,Electrochemical transporter,0.2920949340888911,31 / 1,CNC(=O)C1=CC=CC=C1
+Sigma non-opioid intracellular receptor 1,SIGMAR1,Q99720,CHEMBL287,Membrane receptor,0.2901450831003311,1043 / 137,CNC(=O)C1=CC=CC=C1
+Sigma intracellular receptor 2,TMEM97,Q5BJF2,CHEMBL4105907,Membrane receptor,0.2901450831003311,204 / 50,CNC(=O)C1=CC=CC=C1
+Sodium-dependent noradrenaline transporter,SLC6A2,P23975,CHEMBL222,Electrochemical transporter,0.2899658558880131,1144 / 166,CNC(=O)C1=CC=CC=C1
+Mitogen-activated protein kinase 14,MAPK14,Q16539,CHEMBL260,Kinase,0.2879690787764606,2165 / 78,CNC(=O)C1=CC=CC=C1
+"Indoleamine 2,3-dioxygenase 1",IDO1,P14902,CHEMBL4685,Oxidoreductase,0.2859617940985935,1427 / 3,CNC(=O)C1=CC=CC=C1
+5-hydroxytryptamine receptor 7,HTR7,P34969,CHEMBL3155,Family A G protein-coupled receptor,0.2840933268083339,884 / 30,CNC(=O)C1=CC=CC=C1
+Telomerase reverse transcriptase,TERT,O14746,CHEMBL2916,Transferase,0.2822282083949987,90 / 18,CNC(=O)C1=CC=CC=C1
+Alpha-2A adrenergic receptor,ADRA2A,P08913,CHEMBL1867,Family A G protein-coupled receptor,0.2781228555859514,291 / 10,CNC(=O)C1=CC=CC=C1
+Cholinesterase,BCHE,P06276,CHEMBL1914,Hydrolase,0.2742238936434539,778 / 106,CNC(=O)C1=CC=CC=C1
+Nitric oxide synthase 1,NOS1,P29475,CHEMBL3568,Oxidoreductase,0.2736424983001926,227 / 20,CNC(=O)C1=CC=CC=C1
+Estrogen receptor beta,ESR2,Q92731,CHEMBL242,Nuclear receptor,0.2726021035401355,214 / 16,CNC(=O)C1=CC=CC=C1
+Estrogen receptor,ESR1,P03372,CHEMBL206,Nuclear receptor,0.2726021035401355,209 / 23,CNC(=O)C1=CC=CC=C1
+Progesterone receptor,PGR,P06401,CHEMBL208,Nuclear receptor,0.2707729815591337,854 / 5,CNC(=O)C1=CC=CC=C1
+Sodium-dependent dopamine transporter,SLC6A3,Q01959,CHEMBL238,Electrochemical transporter,0.270679314632043,1384 / 118,CNC(=O)C1=CC=CC=C1
+5-hydroxytryptamine receptor 1A,HTR1A,P08908,CHEMBL214,Family A G protein-coupled receptor,0.2704628670553761,980 / 39,CNC(=O)C1=CC=CC=C1
+Serine/threonine-protein kinase/endoribonuclease IRE1,ERN1,O75460,CHEMBL1163101,Enzyme,0.2684935993725281,16 / 59,CNC(=O)C1=CC=CC=C1
+5'-nucleotidase,NT5E,P21589,CHEMBL5957,Phosphatase,0.2684531380665911,57 / 2,CNC(=O)C1=CC=CC=C1
+Intermediate conductance calcium-activated potassium channel protein 4,KCNN4,O15554,CHEMBL4305,Voltage-gated ion channel,0.2682271075205409,70 / 4,CNC(=O)C1=CC=CC=C1
+Vascular endothelial growth factor receptor 2,KDR,P35968,CHEMBL279,Kinase,0.2653147128577993,2193 / 45,CNC(=O)C1=CC=CC=C1
+Prostaglandin G/H synthase 1,PTGS1,P23219,CHEMBL221,Oxidoreductase,0.2603658308536582,384 / 12,CNC(=O)C1=CC=CC=C1
+Prothrombin,F2,P00734,CHEMBL204,Protease,0.2592143722771139,502 / 33,CNC(=O)C1=CC=CC=C1
+Chymase,CMA1,P23946,CHEMBL4068,Protease,0.2571041732696897,72 / 10,CNC(=O)C1=CC=CC=C1
+5-hydroxytryptamine receptor 2C,HTR2C,P28335,CHEMBL225,Family A G protein-coupled receptor,0.2563679398557015,734 / 34,CNC(=O)C1=CC=CC=C1
+Plasma kallikrein,KLKB1,P03952,CHEMBL2000,Protease,0.2550655188466271,915 / 18,CNC(=O)C1=CC=CC=C1
+Amine oxidase [copper-containing] 3,AOC3,Q16853,CHEMBL3437,Oxidoreductase,0.2546252626250697,128 / 28,CNC(=O)C1=CC=CC=C1
+Signal transducer and activator of transcription 3,STAT3,P40763,CHEMBL4026,Transcription factor,0.2534684529584045,202 / 5,CNC(=O)C1=CC=CC=C1
+Histone deacetylase 11,HDAC11,Q96DB2,CHEMBL3310,Eraser,0.2532233630849925,47 / 14,CNC(=O)C1=CC=CC=C1
+Polyamine deacetylase HDAC10,HDAC10,Q969S8,CHEMBL5103,Eraser,0.2532233630849925,57 / 12,CNC(=O)C1=CC=CC=C1
+Heat shock protein HSP 90-beta,HSP90AB1,P08238,CHEMBL4303,Other cytosolic protein,0.2520326691176491,86 / 31,CNC(=O)C1=CC=CC=C1
+Protein O-GlcNAcase,OGA,O60502,CHEMBL5921,Hydrolase,0.251711863594646,166 / 1,CNC(=O)C1=CC=CC=C1
+Delta-type opioid receptor,OPRD1,P41143,CHEMBL236,Family A G protein-coupled receptor,0.2504766642440639,323 / 145,CNC(=O)C1=CC=CC=C1
+Carbonic anhydrase 14,CA14,Q9ULX7,CHEMBL3510,Lyase,0.2501886953436437,283 / 47,CNC(=O)C1=CC=CC=C1
+N-acylethanolamine-hydrolyzing acid amidase,NAAA,Q02083,CHEMBL4349,Hydrolase,0.2481034128554746,153 / 6,CNC(=O)C1=CC=CC=C1
+"Glutamate receptor ionotropic, NMDA 2B",GRIN2B,Q13224,CHEMBL1904,Ligand-gated ion channel,0.2449674764539925,1031 / 17,CNC(=O)C1=CC=CC=C1
+5-hydroxytryptamine receptor 2B,HTR2B,P41595,CHEMBL1833,Family A G protein-coupled receptor,0.2440698454365341,316 / 30,CNC(=O)C1=CC=CC=C1
+Receptor tyrosine-protein kinase erbB-2,ERBB2,P04626,CHEMBL1824,Kinase,0.243482126489227,301 / 9,CNC(=O)C1=CC=CC=C1
+Kappa-type opioid receptor,OPRK1,P41145,CHEMBL237,Family A G protein-coupled receptor,0.2409936868578526,1022 / 110,CNC(=O)C1=CC=CC=C1
+D(2) dopamine receptor,DRD2,P14416,CHEMBL217,Family A G protein-coupled receptor,0.2408070180964717,1579 / 135,CNC(=O)C1=CC=CC=C1
+Cyclin-dependent kinase 5/CDK5 activator 1,,Q00535&Q15078,CHEMBL1907600,Kinase,0.2407222329228941,575 / 5,CNC(=O)C1=CC=CC=C1
+Glycogen synthase kinase-3 beta,GSK3B,P49841,CHEMBL262,Kinase,0.2407222329228941,1644 / 13,CNC(=O)C1=CC=CC=C1
+Cyclin-dependent kinase 1/cyclin B,,P06493&P14635&Q8WWL7&O95067,CHEMBL2094127,Kinase,0.2407222329228941,233 / 3,CNC(=O)C1=CC=CC=C1
+Cathepsin G,CTSG,P08311,CHEMBL4071,Protease,0.2389839652981672,20 / 9,CNC(=O)C1=CC=CC=C1
+Carbonic anhydrase 7,CA7,P43166,CHEMBL2326,Lyase,0.2361292835527013,572 / 48,CNC(=O)C1=CC=CC=C1
+Tyrosine-protein kinase JAK1,JAK1,P23458,CHEMBL2835,Kinase,0.2361292835527013,3215 / 10,CNC(=O)C1=CC=CC=C1
