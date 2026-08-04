@@ -98,6 +98,51 @@ Results are saved to the `result/` directory in JSON format.
 }
 ```
 
+## Comparison with Web Servers · 与在线查询工具对比
+
+We compared this local engine against **SwissTargetPrediction (STP)** on 5 representative compounds (aspirin, caffeine, dopamine, dopamine analog, paracetamol), using the actual STP batch results captured during development (`data/comparison/swiss_results.csv`):
+
+我们使用开发期间实际抓取的 SwissTargetPrediction 批量结果（`data/comparison/swiss_results.csv`），用 5 个代表性化合物（阿司匹林、咖啡因、多巴胺、多巴胺类似物、对乙酰氨基酚）与本工具做了真实对比：
+
+| Compound · 化合物 | STP targets | Local targets | Overlap · 重叠 | STP-side rate | Local-side rate |
+|---|---|---|---|---|---|
+| Aspirin · 阿司匹林 | 100 | 70 | 30 | 30% | 43% |
+| Caffeine · 咖啡因 | 100 | 40 | 19 | 19% | 48% |
+| Dopamine analog · 多巴胺类似物 | 100 | 100 | 54 | 54% | 54% |
+| Dopamine · 多巴胺 | 100 | 51 | 28 | 28% | 55% |
+| Paracetamol · 对乙酰氨基酚 | 100 | 192 | 42 | 42% | 22% |
+
+**Reading the table · 读表方式**：the two tools overlap on roughly **20–55%** of predictions. Both tools return distinct extra targets the other misses — differences come from database versions, scoring functions, and thresholds. 两个工具的重叠率约为 **20–55%**，各自都有对方未命中的额外靶点——差异源于数据库版本、打分函数和阈值不同。
+
+### Ground-truth check · 已知药靶验证
+
+| Drug · 药物 | Known target · 已知靶点 | STP | Local |
+|---|---|---|---|
+| Aspirin · 阿司匹林 | PTGS2 (CHEMBL230) | ✓ | ✓ |
+| Aspirin · 阿司匹林 | PTGS1 (CHEMBL221) | ✓ | ✗ |
+| Caffeine · 咖啡因 | ADORA2A (CHEMBL251) | ✓ | ✓ |
+| Caffeine · 咖啡因 | ADORA1 (CHEMBL253) | ✓ | ✗ |
+| Dopamine · 多巴胺 | DRD2 (CHEMBL217) | ✓ | ✓ |
+| Dopamine · 多巴胺 | DRD3 (CHEMBL234) | ✓ | ✓ |
+| Paracetamol · 对乙酰氨基酚 | PTGS2 (CHEMBL230) | ✗ | ✓ |
+
+Both tools correctly identified most well-established drug targets, but **neither is complete** — each misses some known targets the other catches. 两个工具都能命中大部分公认的药靶，但**都不完整**——各有遗漏。
+
+### About accuracy · 关于准确率
+
+There is **no single universal accuracy number** for target prediction — it depends heavily on the compound and the cutoff. Typical expectations:
+
+靶点预测**没有统一的准确率数字**——它高度依赖化合物本身和阈值选择。参考经验值：
+
+| Scenario · 场景 | Expected agreement · 预期一致率 |
+|---|---|
+| Top-5 hits vs. web servers · 与在线工具 top-5 对比 | ~40–60% agreement 一致率 |
+| Well-known drug targets (e.g. aspirin→PTGS2) · 公认药靶 | Both tools usually hit · 两工具通常都能命中 |
+| High-confidence calls (pvalue < 1e-5) · 高置信预测 | Most are biologically plausible · 大多有生物学合理性 |
+| Entire prediction lists · 完整预测列表 | Low overlap (different scoring) · 重叠率低（打分机制不同） |
+
+> **Honest expectation · 诚实预期**：expect **~30–50% overlap** with web servers on full lists, and **~40–60% on top hits**. This is normal — different tools are complementary, not interchangeable. Use multiple tools and treat predictions as hypotheses. 与在线工具完整列表重叠率约 **30–50%**，top 命中约 **40–60%**。这是正常现象——不同工具互补而非互替。建议多工具交叉验证，预测仅作假设。
+
 ## Data · 数据
 
 | File · 文件 | Size · 大小 | Source · 来源 |
