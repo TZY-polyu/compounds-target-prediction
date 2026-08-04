@@ -179,3 +179,5 @@ There is **no single universal accuracy number** for target prediction — it de
 ---
 
 2026.6.30-2026.8.7实习期间完成，没工资，只有一张证明，想着留一个纪念从而上传，没指望会有人看到，但毕竟这是我本人第一个正儿八经的项目，虽然没啥含金量。如果项目有问题，可以及时联系，我会尽快修改
+
+*Completed during my internship from June 30 to August 7, 2026. No salary — just a certificate. I uploaded this as a keepsake, not expecting anyone to see it, but it is my first real project after all, however modest. If you find any issues, feel free to reach out and I will fix them as soon as possible.*
