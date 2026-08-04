@@ -9,10 +9,6 @@ SEA+TC 预测引擎
 """
 
 import math
-import json
-import hashlib
-import os
-from pathlib import Path
 from typing import Dict, List, Optional
 
 from rdkit import DataStructs
@@ -168,82 +164,3 @@ def predict_targets(
         results = results[:top_n]
 
     return results
-
-
-def predict_batch(
-    smiles_list: List[str],
-    target_fps: Dict[str, List],
-    fit_params: Optional[Dict] = None,
-    **kwargs,
-) -> Dict:
-    """
-    批量预测多个化合物的靶标。
-
-    Args:
-        smiles_list: SMILES 列表
-        target_fps: 指纹数据库
-        fit_params: 背景模型参数
-        **kwargs: 传递给 predict_targets 的其他参数
-
-    Returns:
-        {
-            "method": "sea+tc",
-            "total_compounds": N,
-            "results": [
-                {"smiles": "...", "total_predictions": M, "targets": [...]},
-                ...
-            ]
-        }
-    """
-    results = []
-    for smi in smiles_list:
-        try:
-            targets = predict_targets(smi, target_fps, fit_params, **kwargs)
-            results.append({
-                "smiles": smi,
-                "method": "sea+tc",
-                "total_predictions": len(targets),
-                "targets": targets,
-            })
-        except Exception as e:
-            results.append({
-                "smiles": smi,
-                "error": str(e),
-            })
-
-    return {
-        "method": "sea+tc",
-        "total_compounds": len(smiles_list),
-        "results": results,
-    }
-
-
-def predict_with_cache(
-    smiles: str,
-    target_fps: Dict[str, List],
-    fit_params: Optional[Dict] = None,
-    cache_dir: str = ".cache",
-    **kwargs,
-) -> List[Dict]:
-    """
-    带缓存的单化合物预测。
-
-    缓存 key = MD5(SMILES + pvalue_cutoff + maxtc_cutoff)
-    """
-    pvalue_cutoff = kwargs.get("pvalue_cutoff", 0.05)
-    maxtc_cutoff = kwargs.get("maxtc_cutoff", 0.4)
-
-    key = hashlib.md5(f"{smiles}_{pvalue_cutoff}_{maxtc_cutoff}".encode()).hexdigest()[:12]
-    cache_path = Path(cache_dir).resolve() / f"sea_local_{key}.json"
-
-    if cache_path.exists():
-        with open(cache_path) as f:
-            return json.load(f)
-
-    targets = predict_targets(smiles, target_fps, fit_params, **kwargs)
-
-    os.makedirs(cache_dir, exist_ok=True)
-    with open(cache_path, "w", encoding="utf-8") as f:
-        json.dump(targets, f, indent=2, ensure_ascii=False)
-
-    return targets

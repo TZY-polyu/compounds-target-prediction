@@ -9,7 +9,6 @@ import pickle
 import os
 from typing import Dict, List, Optional, Tuple
 
-import numpy as np
 from rdkit import Chem
 from rdkit.Chem import AllChem
 from rdkit import DataStructs
@@ -98,39 +97,3 @@ def load_fingerprints(input_path: str) -> Dict:
     """从 pickle 文件加载指纹数据库"""
     with open(input_path, "rb") as f:
         return pickle.load(f)
-
-
-def fps_to_numpy_arrays(
-    target_fps: Dict[str, List[DataStructs.ExplicitBitVect]],
-) -> Dict[str, np.ndarray]:
-    """
-    将 RDKit 指纹转换为 numpy uint8 数组（2048 bits → 256 bytes per fingerprint）。
-
-    用于加速批量 Tanimoto 计算（可选）。
-    """
-    target_np = {}
-    for tid, fps in target_fps.items():
-        arr = np.zeros((len(fps), 2048), dtype=np.uint8)
-        for i, fp in enumerate(fps):
-            DataStructs.ConvertToNumpyArray(fp, arr[i])
-        target_np[tid] = arr
-    return target_np
-
-
-def tanimoto_from_numpy(query: np.ndarray, db: np.ndarray) -> np.ndarray:
-    """
-    使用 numpy 批量计算 Tanimoto 系数。
-
-    Tc(A, B) = (A & B).sum() / ((A | B).sum())
-    """
-    query_bool = query.astype(bool)
-    db_bool = db.astype(bool)
-
-    intersect = (query_bool & db_bool).sum(axis=1)
-    union = (query_bool | db_bool).sum(axis=1)
-
-    with np.errstate(divide="ignore", invalid="ignore"):
-        tc = intersect / union
-        tc[union == 0] = 0.0
-
-    return tc

@@ -174,4 +174,4 @@ This tool was born out of practical necessity while screening large compound set
 
 ---
 
-*Completed during my internship from June 30 to August 7, 2026. No salary — just a certificate. I uploaded this as a keepsake, not expecting anyone to see it, but it is my first real project after all, however modest. If you find any issues, feel free to reach out and I will fix them as soon as possible.*
+*Completed during my internship from June 30 to August 7, 2026. No salary — just a certificate. I uploaded this as a keepsake. If you find any issues, feel free to reach out and I will fix them as soon as possible.*

@@ -92,24 +92,20 @@ def extract_target_ligands(
             continue
         tid = row["target_id"]
         smi = row["smiles"]
-        if tid not in targets:
-            targets[tid] = {"ligands": {}, "n_high_confidence": 0}
         # 用 SMILES 作 key 去重; 记录最高 pchembl_value
-        prev = targets[tid]["ligands"].get(smi)
+        prev = targets.get(tid, {}).get(smi)
         if prev is None or pv > prev:
-            targets[tid]["ligands"][smi] = pv
-            if pv >= 6.0:  # IC50 <= 1uM 视为高置信
-                targets[tid]["n_high_confidence"] += 1
+            targets.setdefault(tid, {})[smi] = pv
 
     conn.close()
 
     # 组装输出结构, 过滤 min_ligands
     result: dict = {}
-    for tid, data in targets.items():
-        if len(data["ligands"]) < min_ligands:
+    for tid, ligands in targets.items():
+        if len(ligands) < min_ligands:
             continue
         result[tid] = [{"smiles": s} for s in sorted(
-            data["ligands"], key=lambda s: -data["ligands"][s]
+            ligands, key=lambda s: -ligands[s]
         )]
 
     return result

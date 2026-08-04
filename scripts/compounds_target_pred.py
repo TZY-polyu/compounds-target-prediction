@@ -30,11 +30,6 @@ def find_scripts_dir() -> Path:
     return Path(__file__).resolve().parent
 
 
-def get_cache_path(prefix: str, smiles: str, param: float, cache_dir: str) -> Path:
-    h = hashlib.md5(f"{smiles}_{param}".encode()).hexdigest()[:12]
-    return Path(cache_dir).resolve() / f"{prefix}_{h}.json"
-
-
 # ── Backend ───────────────────────────────────────────────────────────────
 
 _FPS = None
